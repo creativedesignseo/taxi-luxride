@@ -9,14 +9,6 @@ import ServicesSection from '../components/ServicesSection';
 import FeaturesSection from '../components/FeaturesSection';
 import BookingCTA from '../components/BookingCTA';
 
-const Hero = ({ onBooking, onCall }) => {
-  return (
-    <section className="bg-white min-h-[calc(100vh-85px)] pt-[85px]">
-      <UberHero onBooking={onBooking} />
-    </section>
-  );
-};
-
 // Main HomePage Component
 const HomePage = () => {
   const navigate = useNavigate();
@@ -44,8 +36,8 @@ const HomePage = () => {
   };
 
   return (
-    <main>
-      <Hero onBooking={handleBooking} onCall={handleCall} />
+    <main className="pt-[85px]">
+      <UberHero onBooking={handleBooking} />
       <ServicesSection />
       <ToursSection />
       <FeaturesSection />

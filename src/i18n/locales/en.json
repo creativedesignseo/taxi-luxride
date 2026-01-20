@@ -7,11 +7,13 @@
         "home": "Home",
         "services": "Services",
         "rates": "Assistance",
-        "tours": "Tours"
+        "tours": "Tours",
+        "about": "About Us",
+        "contact": "Contact"
     },
     "hero": {
         "badge": "Official 24h Service",
-        "title": "Move around",
+        "title": "Request a ride",
         "titleHighlight": "Barcelona",
         "titleEnd": "without waiting.",
         "subtitle": "24/7 premium service. Airport, Port and long distance. Instant bookings via priority WhatsApp.",
@@ -26,6 +28,12 @@
         "timeLater": "Schedule for later",
         "immediate": "Immediate",
         "requestButton": "Request Taxi",
+        "changeCity": "Change city",
+        "seeRates": "See suggested rates",
+        "selectDate": "Select date",
+        "selectTime": "Pick-up time",
+        "selectTimePlaceholder": "Select time...",
+        "confirmSchedule": "Confirm Schedule",
         "responseTime": "Average response time: 2 minutes"
     },
     "services": {

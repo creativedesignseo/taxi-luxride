@@ -1,8 +1,9 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
   
   const tourLinks = [
@@ -20,10 +21,10 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
   ];
 
   const companyLinks = [
-    { name: 'Sobre Nosotros', href: '#nosotros' },
-    { name: 'Servicios', href: '#servicios' },
-    { name: 'Tarifas', href: '#tarifas' },
-    { name: 'Contacto', href: '#contacto' },
+    { name: t('nav.home'), href: '#nosotros' },
+    { name: t('nav.services'), href: '#servicios' },
+    { name: t('nav.rates'), href: '#tarifas' },
+    { name: t('nav.contact'), href: '#contacto' },
   ];
 
   return (
@@ -45,7 +46,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
               </div>
             </div>
             <p className="text-white/60 text-sm font-['Arimo',sans-serif] leading-relaxed">
-              Tu servicio de taxi premium de confianza. Disponible 24/7 para llevarte a donde necesites.
+              {t('footer.description')}
             </p>
             
             {/* Social Icons */}
@@ -101,7 +102,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">Empresa</h4>
+            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">{t('footer.legal')}</h4>
             <ul className="space-y-3">
               {companyLinks.map((link, i) => (
                 <li key={i}>
@@ -118,13 +119,13 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">Contacto</h4>
+            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">{t('footer.contact')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-[#ffc629] mt-1 shrink-0" />
                 <div>
                   <a href="tel:+34625030000" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors block">
-                    +34 625 030 000
+                    {t('phone_display')}
                   </a>
                   <span className="text-white/40 text-xs">24h disponible</span>
                 </div>
@@ -132,13 +133,13 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-[#ffc629] mt-1 shrink-0" />
                 <a href="mailto:info@taxiluxride.com" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors">
-                  info@taxiluxride.com
+                  {t('footer.email')}
                 </a>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[#ffc629] mt-1 shrink-0" />
                 <div className="text-white/70 text-sm font-['Arimo',sans-serif]">
-                  <span className="block">España</span>
+                  <span className="block">{t('footer.location')}</span>
                 </div>
               </li>
             </ul>
@@ -157,19 +158,19 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
               onClick={() => navigate('/privacidad')}
               className="text-white/50 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
             >
-              Política de Privacidad
+              {t('footer.privacy')}
             </button>
             <button 
               onClick={() => navigate('/aviso-legal')}
               className="text-white/50 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
             >
-              Términos de Uso
+              {t('footer.legalNotice')}
             </button>
             <button 
               onClick={() => navigate('/cookies')}
               className="text-white/50 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
             >
-              Cookies
+              {t('footer.cookies')}
             </button>
           </div>
         </div>

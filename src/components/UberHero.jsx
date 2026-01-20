@@ -1,15 +1,17 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Users, Briefcase, Calendar, Clock, MapPin, Loader2 } from 'lucide-react';
 import CustomDatePicker from './CustomDatePicker';
 import { getPlaceSuggestions, getPlaceDetails, getRouteData, reverseGeocode, generateSessionToken } from '../lib/mapbox';
 import { getCurrentLocation } from '../lib/whatsapp';
 
 const UberHero = ({ onBooking }) => {
+  const { t } = useTranslation();
   // --- STATE ---
   const [origin, setOrigin] = useState('');
   const [destination, setDestination] = useState('');
   const [originCoords, setOriginCoords] = useState(null);
-  const [locationLabel, setLocationLabel] = useState('Detectando...');
+  const [locationLabel, setLocationLabel] = useState(t('hero.immediate') === 'Ahora' ? 'Detectando...' : 'Detecting...');
   const [destCoords, setDestCoords] = useState(null);
   
   // Search / Autocomplete
@@ -211,8 +213,8 @@ const UberHero = ({ onBooking }) => {
 
 
   return (
-    <div className="w-full bg-white font-sans text-black relative">
-      <div className="max-w-[1280px] mx-auto px-6 md:px-16 pt-12 pb-16 relative">
+    <section id="inicio" className="w-full bg-white font-sans text-black relative min-h-[calc(100vh-85px)] flex flex-col justify-start lg:justify-center">
+      <div className="w-full max-w-[1280px] mx-auto px-6 md:px-16 pb-8 relative">
         
         <div className="flex flex-col lg:flex-row gap-0 lg:gap-24 relative z-10">
           
@@ -235,13 +237,13 @@ const UberHero = ({ onBooking }) => {
                   }}
                   className="text-sm font-medium hover:underline transition-all"
                 >
-                  Cambia de ciudad
+                  {t('hero.changeCity')}
                 </button>
              </div>
 
              {/* Heading */}
              <h1 className="text-[36px] md:text-[52px] font-bold leading-[1.15] mb-8 font-['Inter',sans-serif] tracking-tight text-black">
-                Solicita un viaje
+                 {t('hero.title')}
              </h1>
 
              {/* Form Container */}
@@ -260,7 +262,7 @@ const UberHero = ({ onBooking }) => {
                            <path d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1Zm6 13h-8V4h3v7h5v3Z" fill="currentColor"></path>
                          </svg>
                        </div>
-                       <span>{bookingType === 'now' ? 'Pedir ahora' : `${selectedDate} ${selectedTime}`}</span>
+                       <span>{bookingType === 'now' ? t('hero.timeNow') : `${selectedDate} ${selectedTime}`}</span>
                        <div className="w-5 h-5 flex items-center justify-center">
                          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
                            <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8Z" fill="currentColor"></path>
@@ -276,14 +278,14 @@ const UberHero = ({ onBooking }) => {
                              className={`w-full text-left p-3 rounded-lg flex items-center gap-3 ${bookingType === 'now' ? 'bg-black text-white' : 'hover:bg-gray-50'}`}
                            >
                              <Clock size={18} />
-                             <span>Ahora mismo</span>
+                             <span>{t('hero.timeNow')}</span>
                            </button>
                            <button 
                              onClick={() => { setBookingType('scheduled'); setShowCalendarModal(true); setShowTimeModal(false); }}
                              className={`w-full text-left p-3 rounded-lg flex items-center gap-3 ${bookingType === 'scheduled' ? 'bg-black text-white' : 'hover:bg-gray-50'}`}
                            >
                              <Calendar size={18} />
-                             <span>Programar viaje</span>
+                             <span>{t('hero.timeLater')}</span>
                            </button>
                         </div>
                       </div>
@@ -359,9 +361,8 @@ const UberHero = ({ onBooking }) => {
                    <div className="absolute left-[23px] top-[48px] bottom-[48px] w-[2px] bg-black z-0"></div>
 
                    <div className="flex flex-col gap-3">
-                      {/* Origin Input */}
                       <div className={`relative group ${activeInput === 'origin' ? 'z-20' : 'z-10'}`}>
-                         <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-lg flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8]">
+                         <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-[#ffc629]">
                             <div className="absolute left-0 top-0 bottom-0 w-12 flex items-center justify-center z-10">
                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-black">
                                   <path fillRule="evenodd" clipRule="evenodd" d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm0-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" fill="currentColor"></path>
@@ -372,7 +373,7 @@ const UberHero = ({ onBooking }) => {
                                value={origin}
                                onChange={(e) => { setOrigin(e.target.value); setOriginCoords(null); }}
                                onFocus={() => setActiveInput('origin')}
-                               placeholder="Ingresa una ubicación"
+                               placeholder={t('hero.pickupPlaceholder')}
                                className="w-full h-full bg-transparent border-none outline-none text-base font-normal text-black placeholder:text-[#5E5E5E] font-['Inter',sans-serif] pl-12 pr-12 py-3.5"
                             />
                             {/* My Location / Clear */}
@@ -416,7 +417,7 @@ const UberHero = ({ onBooking }) => {
 
                       {/* Destination Input */}
                       <div className={`relative group ${activeInput === 'destination' ? 'z-20' : 'z-0'}`}>
-                         <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-lg flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8]">
+                         <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-[#ffc629]">
                             <div className="absolute left-0 top-0 bottom-0 w-12 flex items-center justify-center z-10">
                                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-black">
                                  <path fillRule="evenodd" clipRule="evenodd" d="M22 2H2v20h20V2Zm-7 7H9v6h6V9Z" fill="currentColor"></path>
@@ -427,7 +428,7 @@ const UberHero = ({ onBooking }) => {
                                value={destination}
                                onChange={(e) => { setDestination(e.target.value); setDestCoords(null); }}
                                onFocus={() => setActiveInput('destination')}
-                               placeholder="Ingresa un destino"
+                               placeholder={t('hero.destinationPlaceholder')}
                                className="w-full h-full bg-transparent border-none outline-none text-base font-normal text-black placeholder:text-[#5E5E5E] font-['Inter',sans-serif] pl-12 pr-4 py-3.5"
                             />
                             {destination && (
@@ -460,6 +461,8 @@ const UberHero = ({ onBooking }) => {
                 </div>
 
                 {/* Vehicle Selector */}
+                {/* Vehicle Selector (Temporarily Disabled) */}
+                {/* 
                 <div className="mt-4 max-h-[350px] overflow-y-auto pr-2 space-y-3 custom-scrollbar">
                    {vehicles.map((v) => (
                       <div 
@@ -489,6 +492,7 @@ const UberHero = ({ onBooking }) => {
                       </div>
                    ))}
                 </div>
+                */}
 
                 {/* CTA Button */}
                 <div className="mt-4">
@@ -498,7 +502,7 @@ const UberHero = ({ onBooking }) => {
                      className="bg-black text-white px-6 py-3.5 rounded-lg font-bold text-base hover:bg-black/90 transition-all font-['Inter',sans-serif] w-fit flex items-center gap-2"
                    >
                      {isRouting ? <Loader2 className="animate-spin" size={20} /> : null}
-                     Ver tarifas sugeridas
+                     {t('hero.seeRates')}
                    </button>
                 </div>
              </div>
@@ -506,27 +510,12 @@ const UberHero = ({ onBooking }) => {
         </div>
         
         {/* Right Content - Image (Desktop Only) */}
-         <div className="hidden lg:block absolute right-[-50px] md:right-0 top-1/2 -translate-y-1/2 w-[600px] h-[600px] pointer-events-none">
-           <div className="relative w-full h-full">
-              <div className="absolute right-16 top-1/2 -translate-y-1/2">
-                 <div className="bg-[#F3F3F3] rounded-[30px] p-8 w-[400px]">
-                    <h6 className="text-lg font-bold mb-4 font-['Inter',sans-serif] text-black">Sugerencias</h6>
-                    <div className="flex items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-black/5 cursor-pointer pointer-events-auto hover:bg-gray-50 transition-colors">
-                       <div className="w-16 h-16 shrink-0">
-                          <img 
-                             src="https://mobile-content.uber.com/launch-experience/top_bar_rides_3d.png" 
-                             alt="Ride"
-                             className="w-full h-full object-contain"
-                          />
-                       </div>
-                       <div>
-                          <p className="font-bold text-base font-['Inter',sans-serif] text-black">Ride</p>
-                          <p className="text-xs text-gray-500">Viajes seguros y rápidos</p>
-                       </div>
-                    </div>
-                 </div>
-              </div>
-           </div>
+        <div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-[50%] max-w-[800px] pointer-events-none pr-4 z-0">
+           <img 
+              src="/img/Coche de lujo.png" 
+              alt="Taxi Lux Ride - Luxury Car"
+              className="w-full h-auto object-contain transform scale-110 translate-x-10"
+           />
         </div>
 
       </div>
@@ -541,7 +530,7 @@ const UberHero = ({ onBooking }) => {
               >
                 ✕
               </button>
-              <h3 className="text-xl font-bold mb-4 text-black">Seleccionar fecha</h3>
+              <h3 className="text-xl font-bold mb-4 text-black">{t('hero.selectDate')}</h3>
               
               <CustomDatePicker 
                  selectedDate={selectedDate}
@@ -550,13 +539,13 @@ const UberHero = ({ onBooking }) => {
               
               {selectedDate && (
                  <div className="mt-4">
-                    <label className="text-sm font-bold text-gray-500 mb-2 block">Hora de recogida</label>
+                    <label className="text-sm font-bold text-gray-500 mb-2 block">{t('hero.selectTime')}</label>
                     <select 
                        value={selectedTime}
                        onChange={(e) => setSelectedTime(e.target.value)}
                        className="w-full p-3 bg-gray-50 rounded-lg border border-gray-200 outline-none focus:border-black"
                     >
-                       <option value="">Seleccionar hora...</option>
+                       <option value="">{t('hero.selectTimePlaceholder')}</option>
                        {timeSlots.map(slot => (
                           <option key={slot} value={slot}>{slot}</option>
                        ))}
@@ -571,13 +560,13 @@ const UberHero = ({ onBooking }) => {
                  }}
                  className="w-full mt-6 bg-black text-white py-3 rounded-lg font-bold hover:bg-black/90 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                 Confirmar Horario
+                  {t('hero.confirmSchedule')}
               </button>
            </div>
         </div>
       )}
 
-    </div>
+    </section>
   );
 };
 

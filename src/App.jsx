@@ -132,25 +132,25 @@ const App = () => {
             onClick={() => { setMobileMenuOpen(false); handleNavClick('top'); }}
             className="text-2xl font-bold text-white border-b border-gray-800 pb-4"
           >
-            Inicio
+            {t('nav.home')}
           </button>
           <button 
             onClick={() => { setMobileMenuOpen(false); handleNavClick('servicios'); }}
             className="text-2xl font-bold text-white border-b border-gray-800 pb-4"
           >
-            Servicios
+            {t('nav.services')}
           </button>
           <button 
             onClick={() => { setMobileMenuOpen(false); handleNavClick('reservar'); }}
             className="text-2xl font-bold text-white border-b border-gray-800 pb-4"
           >
-            Reservar
+            {t('nav.rates')}
           </button>
           <button 
             onClick={() => { setMobileMenuOpen(false); handleNavClick('contacto'); }}
             className="text-2xl font-bold text-white border-b border-gray-800 pb-4"
           >
-            Contacto
+            {t('nav.contact')}
           </button>
           
           <div className="border-b border-gray-800 pb-4">

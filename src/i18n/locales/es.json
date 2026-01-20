@@ -11,7 +11,9 @@
     "home": "Inicio",
     "services": "Servicios",
     "rates": "Asistencia",
-    "tours": "Tours"
+    "tours": "Tours",
+    "about": "Sobre Nosotros",
+    "contact": "Contacto"
   },
   "payment": {
     "title": "Métodos de Pago Aceptados",
@@ -104,11 +106,17 @@
     "time15": "En 15 minutos",
     "pickupPlaceholder": "¿Dónde te recogemos?",
     "subtitle": "Servicio premium 24/7. Aeropuerto, Puerto y larga distancia. Reservas instantáneas vía WhatsApp prioritario.",
-    "title": "Muévete por ",
+    "title": "Solicita un viaje",
     "titleHighlight": "Barcelona",
     "bookingTitle": "Reserva Express",
     "timeLater": "Programar para más tarde",
-    "immediate": "Inmediato"
+    "immediate": "Inmediato",
+    "changeCity": "Cambia de ciudad",
+    "seeRates": "Ver tarifas sugeridas",
+    "selectDate": "Seleccionar fecha",
+    "selectTime": "Hora de recogida",
+    "selectTimePlaceholder": "Seleccionar hora...",
+    "confirmSchedule": "Confirmar Horario"
   },
   "footer": {
     "contact": "Contacto",

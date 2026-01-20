@@ -38,10 +38,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Focus states */
-*:focus-visible {
-  outline: 2px solid #ffc629;
-  outline-offset: 2px;
-}
+
 
 /* Smooth scroll */
 html {
