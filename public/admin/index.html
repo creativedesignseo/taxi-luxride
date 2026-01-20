@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Admin - Taxi Movit</title>
+    <link href="/admin/admin.css?v=2" rel="stylesheet" />
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <style>
+        /* Estilo inicial ultra rápido estilo Apple */
+        body {
+            background-color: #f5f5f7 !important;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        /* Ocultar elementos de Netlify/Decap por defecto */
+        .netlify-identity-menu,
+        footer,
+        .decap-cms-logo {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+        // Brute force to hide branding logos every second (handles dynamic rendering)
+        setInterval(() => {
+            const selectors = ['.decap-cms-logo', 'footer', '[class*="LogoContainer"]', '[class*="StyledAuthenticationPage"] footer'];
+            selectors.forEach(s => {
+                const el = document.querySelector(s);
+                if (el) el.style.display = 'none';
+            });
+        }, 1000);
+    </script>
+</body>
+
+</html>

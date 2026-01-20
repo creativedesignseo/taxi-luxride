@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global font family */
+body {
+  font-family: 'Arimo', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #030213;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1a2e;
+}
+
+/* Selection color matching brand */
+::selection {
+  background-color: #ffc629;
+  color: #030213;
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 2px solid #ffc629;
+  outline-offset: 2px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile action bar spacing */
+@media (max-width: 768px) {
+  main {
+    padding-bottom: 80px;
+  }
+}

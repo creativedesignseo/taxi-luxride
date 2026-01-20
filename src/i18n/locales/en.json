@@ -1,0 +1,208 @@
+{
+    "seo": {
+        "title": "Taxi Lux Ride | Premium Taxi & Airport Transfer 24/7",
+        "description": "Taxi Lux Ride is the best premium taxi service. Official 24/7 bookings to the Airport, Cruise Port, and long distance. Fast licenses and secure transfers."
+    },
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "rates": "Assistance",
+        "tours": "Tours"
+    },
+    "hero": {
+        "badge": "Official 24h Service",
+        "title": "Move around",
+        "titleHighlight": "Barcelona",
+        "titleEnd": "without waiting.",
+        "subtitle": "24/7 premium service. Airport, Port and long distance. Instant bookings via priority WhatsApp.",
+        "ctaWhatsApp": "Book via WhatsApp",
+        "ctaCall": "Call Now",
+        "bookingTitle": "Express Booking",
+        "pickupPlaceholder": "Where should we pick you up?",
+        "destinationPlaceholder": "Destination (Optional)",
+        "timeNow": "As soon as possible (Now)",
+        "time15": "In 15 minutes",
+        "time30": "In 30 minutes",
+        "timeLater": "Schedule for later",
+        "immediate": "Immediate",
+        "requestButton": "Request Taxi",
+        "responseTime": "Average response time: 2 minutes"
+    },
+    "services": {
+        "title": "Transfers and Destinations",
+        "subtitle": "Experts in tourist transfers and transport logistics in Barcelona.",
+        "airport": {
+            "title": "Barcelona Airport (BCN)",
+            "desc": "Direct transfers to and from T1 and T2. Flight monitoring and immediacy.",
+            "tag": "Popular"
+        },
+        "port": {
+            "title": "Cruise Port",
+            "desc": "Dock pickups and personalized transfers for cruise passengers.",
+            "tag": "Direct"
+        },
+        "cityTour": {
+            "title": "City Tours",
+            "desc": "Discover Sagrada Familia, Park Güell and the most iconic corners in comfort.",
+            "tag": "Tourism"
+        },
+        "business": {
+            "title": "Business Service",
+            "desc": "Punctual and discreet transport for senior executives and corporate events.",
+            "tag": "Premium"
+        },
+        "fira": {
+            "title": "Fira de Barcelona / Events",
+            "desc": "Executive transfers for Mobile World Congress (MWC) and international trade fairs.",
+            "tag": "Business"
+        },
+        "bookService": "Book Service"
+    },
+    "rates": {
+        "active": true,
+        "title": "Equipment and Assistance",
+        "subtitle": "Specialized assistance for every passenger's needs.",
+        "tariff1": "Tariff 1 (Day)",
+        "tariff2": "Tariff 2 (Night/Weekend)",
+        "airport": "Airport T1/T2",
+        "port": "Cruise Port",
+        "sants": "Sants Station",
+        "parkGuell": "Park Güell",
+        "consultRate": "Check Now",
+        "babySeat": "Baby Seats",
+        "babySeatDesc": "Approved Group 0+ seats and carriers for the little ones.",
+        "petFriendly": "Pet Friendly Taxi",
+        "petFriendlyDesc": "Travel with your best friend. We are pet friendly and accept dogs and other pets safely.",
+        "pmr": "Adapted Taxi (PRM)",
+        "pmrDesc": "Eurotaxi vehicles adapted for passengers with reduced mobility.",
+        "babySeatMsg": "Hello, I would like to book a taxi with a baby seat (Maxicosi / Group 0+).",
+        "petFriendlyMsg": "Hello, I would like to book a pet friendly taxi.",
+        "pmrMsg": "Hello, I would like to book a PRM adapted taxi for wheelchair access.",
+        "bigLuggage": "Taxi XL 7 Passengers & Luggage",
+        "bigLuggageDesc": "Minivans ideal for groups, families, and transfers with high-volume luggage.",
+        "bigLuggageMsg": "Hello, I would like to book an XL taxi for 7 passengers with a large trunk."
+    },
+    "faq": {
+        "title": "Frequently Asked Questions",
+        "q1": "Can I book an Airport transfer in advance?",
+        "a1": "Absolutely! We recommend booking early to secure your ride. Your driver will be punctual and monitor your flight schedule.",
+        "q2": "What areas do you cover?",
+        "a2": "We cover the entire Barcelona Metropolitan Area and provide long-distance transfers to any destination in Catalonia (Girona, Tarragona) or rest of Spain.",
+        "q3": "We are a large group or have lots of luggage, do you have suitable vehicles?",
+        "a3": "Yes, our fleet includes spacious minivans for up to 6-7 passengers. Let us know when booking to assign the perfect vehicle.",
+        "q4": "Is the service available at night or on holidays?",
+        "a4": "We operate 24/7, 365 days a year. Whether it's an early morning flight or a late night out, we are always available.",
+        "q5": "What payment methods do you accept?",
+        "a5": "We accept cash and all major credit cards directly in the taxi for your convenience."
+    },
+    "payment": {
+        "title": "Accepted Payment Methods",
+        "subtitle": "Security and convenience",
+        "visa": "Visa",
+        "mastercard": "Mastercard",
+        "cash": "Cash",
+        "cards": "Cards"
+    },
+    "cookiesBanner": {
+        "message": "We use our own cookies to remember your language and improve your experience.",
+        "accept": "Accept",
+        "link": "View Cookie Policy"
+    },
+    "footer": {
+        "description": "Premium taxi service. Official licenses and competitive rates.",
+        "contact": "Contact",
+        "email": "info@taxiluxride.com",
+        "location": "Spain",
+        "legal": "Legal",
+        "legalNotice": "Legal Notice",
+        "privacy": "Privacy Policy",
+        "cookies": "Cookies",
+        "copyright": "Taxi Lux Ride"
+    },
+    "mobile": {
+        "call": "Call",
+        "whatsapp": "WhatsApp"
+    },
+    "testimonials": {
+        "title": "What Our Customers Say",
+        "subtitle": "Thousands of travelers trust us every month",
+        "reviews_count": "reviews",
+        "verified": "Verified reviews from real customers",
+        "reviews": [
+            {
+                "text": "The best taxi service I've used in Barcelona. Fast, clean, and the driver was super friendly.",
+                "name": "Laura M.",
+                "location": "Barcelona, Spain"
+            },
+            {
+                "text": "I arrived at the airport without any issues. The driver was waiting for me with a sign and helped with my luggage. Very professional.",
+                "name": "Carlos R.",
+                "location": "Madrid, Spain"
+            },
+            {
+                "text": "I booked an XL taxi for my family (we were 6 people) and it was perfect. Spacious, comfortable, and punctual. 100% recommended.",
+                "name": "Ana G.",
+                "location": "Valencia, Spain"
+            },
+            {
+                "text": "I traveled with my dog and had no problems. The driver was very kind and the car was spotless. Will use the service again.",
+                "name": "Miguel S.",
+                "location": "Zaragoza, Spain"
+            },
+            {
+                "text": "Excellent value for money. The trip from the port to the hotel was quick and the driver was very polite. Definitely the best option in Barcelona.",
+                "name": "Patricia L.",
+                "location": "Seville, Spain"
+            }
+        ]
+    },
+    "booking": {
+        "modal": {
+            "title": "Confirm Booking",
+            "from": "Pickup",
+            "to": "Destination",
+            "time": "Estimated time",
+            "price": "Estimated price",
+            "guestInfo": "Complete your details to continue",
+            "name": "Name",
+            "namePlaceholder": "Your full name",
+            "nameRequired": "Name is required",
+            "nameMin": "Minimum 2 characters",
+            "phone": "Phone",
+            "phonePlaceholder": "612345678",
+            "phoneRequired": "Phone is required",
+            "phoneInvalid": "Invalid phone (e.g: 612345678)",
+            "bookWhatsApp": "Send via WhatsApp",
+            "haveAccount": "Already have an account? Log in",
+            "loginComingSoon": "Login coming soon",
+            "backToGuest": "← Back to guest booking"
+        },
+        "form": {
+            "pickupLabel": "PICKUP",
+            "pickupPlaceholder": "Where should we pick you up?",
+            "destinationLabel": "DESTINATION",
+            "destinationPlaceholder": "Where are you going?",
+            "confirmRoute": "Confirm Route",
+            "useLocation": "Use my location",
+            "estimatedTime": "Estimated Time",
+            "distance": "Distance",
+            "dateLabel": "Date",
+            "timeLabel": "Time",
+            "passengersLabel": "Passengers",
+            "luggageLabel": "Luggage",
+            "transferTypeLabel": "Transfer Type",
+            "oneWay": "One Way",
+            "roundTrip": "Round Trip",
+            "passenger": "Passenger",
+            "passengers": "Passengers",
+            "suitcase": "Suitcase",
+            "suitcases": "Suitcases",
+            "whenLabel": "When?",
+            "now": "Now",
+            "schedule": "Schedule",
+            "selectDate": "Select...",
+            "selectTime": "Select...",
+            "confirmDate": "Confirm Date"
+        }
+    }
+}
