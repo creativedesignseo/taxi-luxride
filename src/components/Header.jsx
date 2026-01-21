@@ -29,25 +29,25 @@ const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 625 03 00
         <nav className="hidden md:flex items-center gap-8">
           <button 
             onClick={() => onNavClick && onNavClick('servicios')}
-            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:opacity-70 transition-opacity"
           >
             {t('nav.services')}
           </button>
           <button 
             onClick={() => onNavClick && onNavClick('reservar')}
-            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:opacity-70 transition-opacity"
           >
             {t('nav.rates')}
           </button>
           <button 
             onClick={() => onNavClick && onNavClick('nosotros')}
-            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:opacity-70 transition-opacity"
           >
             {t('nav.about')}
           </button>
           <button 
             onClick={() => onNavClick && onNavClick('contacto')}
-            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:opacity-70 transition-opacity"
           >
             {t('nav.contact')}
           </button>
@@ -58,7 +58,7 @@ const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 625 03 00
           {/* Phone Link */}
           <button 
             onClick={onCall}
-            className="flex items-center gap-2 text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+            className="flex items-center gap-2 text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:opacity-70 transition-opacity"
           >
             <Phone size={16} />
             <span>{t('phone_display')}</span>

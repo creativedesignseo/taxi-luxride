@@ -29,13 +29,13 @@ const CookieConsent = () => {
             <div className="container mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-between gap-4">
                 <div className="text-gray-300 text-sm text-center md:text-left">
                     {t('cookiesBanner.message')}{' '}
-                    <Link to="/cookies" className="text-yellow-400 hover:text-yellow-300 underline underline-offset-2">
+                    <Link to="/cookies" className="text-white font-bold hover:underline underline-offset-2 transition-opacity hover:opacity-80">
                         {t('cookiesBanner.link')}
                     </Link>
                 </div>
                 <button
                     onClick={handleAccept}
-                    className="bg-yellow-400 hover:bg-yellow-300 text-black font-bold py-2 px-6 rounded-lg transition-colors shadow-lg whitespace-nowrap text-sm"
+                    className="bg-white text-black font-bold py-2 px-6 rounded-lg transition-colors shadow-lg whitespace-nowrap text-sm hover:bg-gray-100"
                 >
                     {t('cookiesBanner.accept')}
                 </button>

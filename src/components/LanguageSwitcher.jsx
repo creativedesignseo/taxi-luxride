@@ -91,7 +91,7 @@ const LanguageSwitcher = () => {
             {/* Large Round SVG Flag Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden bg-white/10 hover:bg-white/20 border-2 border-white/30 hover:border-yellow-400 transition-all duration-200 focus:outline-none shadow-lg hover:shadow-xl hover:scale-110 active:scale-95"
+                className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden bg-white/10 hover:bg-white/20 border-2 border-white/30 hover:border-white/50 transition-all duration-200 focus:outline-none shadow-lg hover:shadow-xl hover:scale-110 active:scale-95"
                 aria-label="Change language"
             >
                 <img 
@@ -110,9 +110,9 @@ const LanguageSwitcher = () => {
                             <button
                                 key={lang.code}
                                 onClick={() => changeLanguage(lang.code)}
-                                className={`w-full px-4 py-3 text-left hover:bg-yellow-50 transition-all duration-150 flex items-center gap-3 ${
+                                className={`w-full px-4 py-3 text-left hover:bg-gray-50 transition-all duration-150 flex items-center gap-3 ${
                                     currentLangCode === lang.code 
-                                        ? 'bg-yellow-100 font-semibold text-black' 
+                                        ? 'bg-gray-100 font-semibold text-black' 
                                         : 'text-gray-700'
                                 }`}
                             >
@@ -125,7 +125,7 @@ const LanguageSwitcher = () => {
                                 />
                                 <span className="text-sm font-medium">{lang.name}</span>
                                 {currentLangCode === lang.code && (
-                                    <span className="ml-auto text-yellow-500 text-lg">✓</span>
+                                    <span className="ml-auto text-black text-lg">✓</span>
                                 )}
                             </button>
                         ))}

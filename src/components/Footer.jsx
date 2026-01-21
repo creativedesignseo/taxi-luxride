@@ -48,16 +48,16 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
             
             {/* Social Icons */}
             <div className="flex items-center gap-4 mt-6">
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <Facebook size={16} className="text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <Instagram size={16} className="text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <Twitter size={16} className="text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-white/20 transition-colors">
                 <Linkedin size={16} className="text-white" />
               </a>
             </div>
@@ -71,7 +71,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <li key={i}>
                   <a 
                     href={link.href}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
                   >
                     {link.name}
                   </a>
@@ -88,7 +88,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <li key={i}>
                   <a 
                     href={link.href}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
                   >
                     {link.name}
                   </a>
@@ -105,7 +105,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <li key={i}>
                   <a 
                     href={link.href}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
+                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
                   >
                     {link.name}
                   </a>
@@ -121,7 +121,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-[#FFDB3A] mt-1 shrink-0" />
                 <div>
-                  <a href="tel:+34631806648" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors block">
+                  <a href="tel:+34631806645" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors block">
                     {t('phone_display')}
                   </a>
                   <span className="text-white/40 text-xs">24h disponible</span>
@@ -129,7 +129,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
               </li>
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-[#FFDB3A] mt-1 shrink-0" />
-                <a href="mailto:info@taxiluxride.com" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors">
+                <a href="mailto:info@taxiluxride.com" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors">
                   {t('footer.email')}
                 </a>
               </li>

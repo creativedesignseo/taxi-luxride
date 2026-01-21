@@ -4,7 +4,7 @@ import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const FAQItem = ({ question, answer, isOpen, onClick }) => {
     return (
-        <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-yellow-400 transition-colors">
+        <div className="border border-gray-200 rounded-2xl overflow-hidden bg-white hover:border-gray-300 transition-colors">
             <button
                 onClick={onClick}
                 className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"

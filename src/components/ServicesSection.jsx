@@ -63,7 +63,7 @@ const ServicesSection = () => {
               key={index}
               className="bg-white border border-black/[0.03] rounded-2xl p-6 hover:shadow-xl hover:shadow-black/[0.03] hover:border-[#FFDB3A]/30 transition-all cursor-pointer group"
             >
-              <div className="w-14 h-14 bg-[rgba(3,2,19,0.05)] rounded-xl flex items-center justify-center text-[#1C1F23] group-hover:bg-[#FFDB3A] transition-colors">
+              <div className="w-14 h-14 bg-[rgba(3,2,19,0.05)] rounded-xl flex items-center justify-center text-[#1C1F23] group-hover:bg-gray-200 transition-colors">
                 {service.icon}
               </div>
               <div className="mt-6">

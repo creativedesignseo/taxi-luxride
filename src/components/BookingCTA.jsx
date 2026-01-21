@@ -39,7 +39,7 @@ const BookingCTA = ({ onBooking }) => {
                     <input 
                       type="text" 
                       placeholder="¿Dónde te recogemos?"
-                      className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-[#FFDB3A] focus:border-transparent outline-none font-['Arimo',sans-serif]"
+                      className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none font-['Arimo',sans-serif]"
                     />
                   </div>
                 </div>
@@ -50,7 +50,7 @@ const BookingCTA = ({ onBooking }) => {
                     <input 
                       type="text" 
                       placeholder="¿A dónde vas?"
-                      className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-[#FFDB3A] focus:border-transparent outline-none font-['Arimo',sans-serif]"
+                      className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none font-['Arimo',sans-serif]"
                     />
                   </div>
                 </div>

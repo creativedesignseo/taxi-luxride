@@ -26,7 +26,7 @@ const App = () => {
   const location = useLocation();
 
   // Phone configuration
-  const PHONE_NUMBER = "+34631806648";
+  const PHONE_NUMBER = "+34631806645";
   const PHONE_DISPLAY = "+34 625 03 00 00";
 
   // Scroll to top on route change

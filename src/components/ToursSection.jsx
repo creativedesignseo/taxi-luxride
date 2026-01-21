@@ -45,7 +45,7 @@ const ToursSection = () => {
               Conoce los lugares más emblemáticos de la ciudad con nuestros conductores expertos. Servicio personalizado y sin esperas.
             </p>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-[#1C1F23] font-bold font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors">
+          <button className="hidden md:flex items-center gap-2 text-[#1C1F23] font-bold font-['Arimo',sans-serif] hover:opacity-70 transition-colors">
             Ver todos los tours <ArrowRight size={20} />
           </button>
         </div>
@@ -65,7 +65,7 @@ const ToursSection = () => {
                     <span className="text-sm font-bold text-[#1C1F23] font-['Arimo',sans-serif]">{tour.price}</span>
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-[#1C1F23] mb-1 font-['Arimo',sans-serif] group-hover:text-[#FFDB3A] transition-colors">
+                <h3 className="text-xl font-bold text-[#1C1F23] mb-1 font-['Arimo',sans-serif] group-hover:text-black transition-colors">
                   {tour.title}
                 </h3>
                 <div className="flex items-center justify-between">

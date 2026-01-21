@@ -12,7 +12,7 @@ const ToursPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const PHONE_NUMBER = "+34631806648";
+    const PHONE_NUMBER = "+34631806645";
 
     const handleCall = () => {
         window.location.href = `tel:${PHONE_NUMBER}`;

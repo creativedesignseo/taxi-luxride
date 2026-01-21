@@ -167,7 +167,7 @@
             "namePlaceholder": "Ihr vollständiger Name",
             "nameRequired": "Name ist erforderlich",
             "nameMin": "Mindestens 2 Zeichen",
-            "phone": "Telefon",
+            "phone_display": "+34 631 80 66 45",
             "phonePlaceholder": "612345678",
             "phoneRequired": "Telefon ist erforderlich",
             "phoneInvalid": "Ungültige Telefonnummer",

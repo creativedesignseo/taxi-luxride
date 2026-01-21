@@ -15,7 +15,7 @@ const MobileHeroForm = ({ onBooking }) => {
             <input 
               type="text" 
               placeholder="Dirección de origen"
-              className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-[#FFDB3A] focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
+              className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
             />
           </div>
         </div>
@@ -28,7 +28,7 @@ const MobileHeroForm = ({ onBooking }) => {
             <input 
               type="text" 
               placeholder="Dirección de destino"
-              className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-[#FFDB3A] focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
+              className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
             />
           </div>
         </div>
@@ -42,7 +42,7 @@ const MobileHeroForm = ({ onBooking }) => {
               <input 
                 type="text" 
                 placeholder="Hoy"
-                className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-[#FFDB3A] focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
+                className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
               />
             </div>
           </div>
@@ -53,7 +53,7 @@ const MobileHeroForm = ({ onBooking }) => {
               <input 
                 type="text" 
                 placeholder="Ahora"
-                className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-[#FFDB3A] focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
+                className="w-full pl-10 pr-4 py-3 border border-[rgba(3,2,19,0.1)] rounded-xl focus:ring-2 focus:ring-black focus:border-transparent outline-none font-['Arimo',sans-serif] text-sm"
               />
             </div>
           </div>

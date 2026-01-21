@@ -526,7 +526,7 @@ const UberHero = ({ onBooking }) => {
                       {/* Stops Inputs (Multiple Destinations) */}
                       {stops.map((stop, index) => (
                         <div key={stop.id} className={`relative group ${activeInput === `stop-${index}` ? 'z-20' : 'z-0'}`}>
-                          <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-[#FFDB3A]">
+                          <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-black">
                              <div className="absolute left-0 top-0 bottom-0 w-12 flex items-center justify-center z-10">
                                 {/* Square icon for last stop, number for intermediate */}
                                 {index === stops.length - 1 ? (
