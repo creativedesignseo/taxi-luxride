@@ -62,7 +62,7 @@ const MobileHeroForm = ({ onBooking }) => {
         {/* Submit Button */}
         <button 
           onClick={onBooking}
-          className="w-full bg-[#FFDB3A] text-[#1C1F23] py-4 rounded-xl font-bold hover:bg-[#E5C434] transition-colors flex items-center justify-center gap-2 font-['Inter',sans-serif] mt-2 shadow-md"
+          className="w-full bg-[#1C1F23] text-white py-4 rounded-xl font-bold hover:bg-[#1C1F23]/90 transition-all flex items-center justify-center gap-2 font-['Inter',sans-serif] mt-2 shadow-md"
         >
           Ver Tarifas
         </button>

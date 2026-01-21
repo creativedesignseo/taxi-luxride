@@ -12,7 +12,7 @@
  * @returns {string} WhatsApp deep link
  */
 export function generateWhatsAppLink(bookingData, userData) {
-  const WHATSAPP_NUMBER = '34631806645';
+  const WHATSAPP_NUMBER = '34631806648';
   
   // Generate Google Maps links with coordinates
   const originLat = bookingData.origin.coordinates[1];

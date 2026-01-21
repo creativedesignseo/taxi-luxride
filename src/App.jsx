@@ -26,7 +26,7 @@ const App = () => {
   const location = useLocation();
 
   // Phone configuration
-  const PHONE_NUMBER = "+34631806645";
+  const PHONE_NUMBER = "+34631806648";
   const PHONE_DISPLAY = "+34 625 03 00 00";
 
   // Scroll to top on route change
@@ -160,7 +160,7 @@ const App = () => {
 
           <button 
             onClick={handleCall} 
-            className="mt-4 w-full bg-[#FFDB3A] text-[#1C1F23] py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2"
+            className="mt-4 w-full bg-[#1C1F23] text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-[#1C1F23]/90 transition-all"
           >
             <Phone /> Llamar
           </button>
