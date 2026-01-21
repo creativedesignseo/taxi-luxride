@@ -48,7 +48,7 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <span className="text-sm font-medium text-[rgba(3,2,19,0.5)] uppercase tracking-wider font-['Arimo',sans-serif]">{t('nav.services')}</span>
-          <h2 className="text-[32px] md:text-[48px] font-bold text-[#030213] mt-2 md:mt-4 leading-tight font-['Inter',sans-serif]">
+          <h2 className="text-[32px] md:text-[48px] font-bold text-[#1C1F23] mt-2 md:mt-4 leading-tight font-['Inter',sans-serif]">
             {t('services.title')}
           </h2>
           <p className="text-base md:text-lg text-[rgba(3,2,19,0.7)] mt-4 max-w-2xl mx-auto font-['Arimo',sans-serif]">
@@ -61,16 +61,16 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white border border-black/[0.03] rounded-2xl p-6 hover:shadow-xl hover:shadow-black/[0.03] hover:border-[#ffc629]/30 transition-all cursor-pointer group"
+              className="bg-white border border-black/[0.03] rounded-2xl p-6 hover:shadow-xl hover:shadow-black/[0.03] hover:border-[#FFDB3A]/30 transition-all cursor-pointer group"
             >
-              <div className="w-14 h-14 bg-[rgba(3,2,19,0.05)] rounded-xl flex items-center justify-center text-[#030213] group-hover:bg-[#ffc629] transition-colors">
+              <div className="w-14 h-14 bg-[rgba(3,2,19,0.05)] rounded-xl flex items-center justify-center text-[#1C1F23] group-hover:bg-[#FFDB3A] transition-colors">
                 {service.icon}
               </div>
               <div className="mt-6">
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xs font-medium text-[rgba(3,2,19,0.5)] bg-[rgba(3,2,19,0.05)] px-2 py-1 rounded font-['Arimo',sans-serif]">{service.tag}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#030213] font-['Arimo',sans-serif]">{service.title}</h3>
+                <h3 className="text-xl font-bold text-[#1C1F23] font-['Arimo',sans-serif]">{service.title}</h3>
                 <p className="text-[rgba(3,2,19,0.7)] mt-2 font-['Arimo',sans-serif]">{service.description}</p>
               </div>
             </div>
@@ -82,3 +82,4 @@ const ServicesSection = () => {
 };
 
 export default ServicesSection;
+

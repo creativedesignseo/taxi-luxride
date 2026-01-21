@@ -28,7 +28,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
   ];
 
   return (
-    <footer className="bg-[#030213] text-white">
+    <footer className="bg-[#1C1F23] text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
@@ -36,14 +36,11 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-[#ffc629] rounded-[14px] flex items-center justify-center">
-                <span className="text-[#030213] font-bold text-lg font-['Arimo',sans-serif]">TL</span>
-              </div>
-              <div className="flex items-baseline gap-1">
-                <span className="text-white font-bold text-lg font-['Arimo',sans-serif]">Taxi</span>
-                <span className="text-[#ffc629] font-bold text-lg font-['Arimo',sans-serif]">Lux</span>
-                <span className="text-white font-bold text-lg font-['Arimo',sans-serif]">Ride</span>
-              </div>
+              <img 
+                src="/img/logo-dark.svg" 
+                alt="Taxi Lux Ride" 
+                className="h-10 w-auto"
+              />
             </div>
             <p className="text-white/60 text-sm font-['Arimo',sans-serif] leading-relaxed">
               {t('footer.description')}
@@ -51,16 +48,16 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
             
             {/* Social Icons */}
             <div className="flex items-center gap-4 mt-6">
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#ffc629] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
                 <Facebook size={16} className="text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#ffc629] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
                 <Instagram size={16} className="text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#ffc629] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
                 <Twitter size={16} className="text-white" />
               </a>
-              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#ffc629] transition-colors">
+              <a href="#" className="w-8 h-8 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFDB3A] transition-colors">
                 <Linkedin size={16} className="text-white" />
               </a>
             </div>
@@ -74,7 +71,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <li key={i}>
                   <a 
                     href={link.href}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -91,7 +88,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <li key={i}>
                   <a 
                     href={link.href}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -108,7 +105,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <li key={i}>
                   <a 
                     href={link.href}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
                   >
                     {link.name}
                   </a>
@@ -122,22 +119,22 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
             <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">{t('footer.contact')}</h4>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Phone size={16} className="text-[#ffc629] mt-1 shrink-0" />
+                <Phone size={16} className="text-[#FFDB3A] mt-1 shrink-0" />
                 <div>
-                  <a href="tel:+34625030000" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors block">
+                  <a href="tel:+34625030000" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors block">
                     {t('phone_display')}
                   </a>
                   <span className="text-white/40 text-xs">24h disponible</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Mail size={16} className="text-[#ffc629] mt-1 shrink-0" />
-                <a href="mailto:info@taxiluxride.com" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors">
+                <Mail size={16} className="text-[#FFDB3A] mt-1 shrink-0" />
+                <a href="mailto:info@taxiluxride.com" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors">
                   {t('footer.email')}
                 </a>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin size={16} className="text-[#ffc629] mt-1 shrink-0" />
+                <MapPin size={16} className="text-[#FFDB3A] mt-1 shrink-0" />
                 <div className="text-white/70 text-sm font-['Arimo',sans-serif]">
                   <span className="block">{t('footer.location')}</span>
                 </div>
@@ -180,3 +177,4 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
 };
 
 export default Footer;
+

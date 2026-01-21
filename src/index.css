@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Brand Colors */
+:root {
+  --brand-yellow: #FFDB3A;
+  --brand-dark: #1C1F23;
+  --brand-yellow-hover: #E5C434;
+}
+
 /* Global font family */
 body {
   font-family: 'Arimo', sans-serif;
@@ -23,22 +30,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #030213;
+  background: var(--brand-dark);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1a1a2e;
+  background: #2a2e33;
 }
 
 /* Selection color matching brand */
 ::selection {
-  background-color: #ffc629;
-  color: #030213;
+  background-color: var(--brand-yellow);
+  color: var(--brand-dark);
 }
-
-/* Focus states */
-
 
 /* Smooth scroll */
 html {

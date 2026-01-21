@@ -1,5 +1,6 @@
 import React from 'react';
 import { ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ToursSection = () => {
   const tours = [
@@ -12,8 +13,9 @@ const ToursSection = () => {
     {
       title: 'Sagrada Familia & Park Güell',
       price: 'Desde 60€',
-      image: 'https://images.unsplash.com/photo-1562883676-8c7c748f49f6?w=800&q=80',
-      duration: '5 horas'
+      image: '/img/sagrada-familia.png',
+      duration: '5 horas',
+      slug: null
     },
     {
       title: 'Camp Nou Experience',
@@ -24,8 +26,9 @@ const ToursSection = () => {
     {
       title: 'Montserrat Excursión',
       price: 'Desde 120€',
-      image: 'https://images.unsplash.com/photo-1564858882888-294b07fb8d36?w=800&q=80',
-      duration: '6 horas'
+      image: '/img/montserrat.png',
+      duration: '6 horas',
+      slug: '/tours'
     }
   ];
 
@@ -35,44 +38,56 @@ const ToursSection = () => {
         <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
           <div className="max-w-xl">
             <span className="text-sm font-medium text-[rgba(3,2,19,0.5)] uppercase tracking-wider font-['Arimo',sans-serif]">Descubre Barcelona</span>
-            <h2 className="text-[48px] font-bold text-[#030213] mt-4 leading-tight font-['Inter',sans-serif]">
+            <h2 className="text-[48px] font-bold text-[#1C1F23] mt-4 leading-tight font-['Inter',sans-serif]">
               Tours Exclusivos
             </h2>
             <p className="text-lg text-[rgba(3,2,19,0.7)] mt-4 font-['Arimo',sans-serif]">
               Conoce los lugares más emblemáticos de la ciudad con nuestros conductores expertos. Servicio personalizado y sin esperas.
             </p>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-[#030213] font-bold font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors">
+          <button className="hidden md:flex items-center gap-2 text-[#1C1F23] font-bold font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors">
             Ver todos los tours <ArrowRight size={20} />
           </button>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {tours.map((tour, index) => (
-            <div key={index} className="group cursor-pointer">
-              <div className="relative rounded-2xl overflow-hidden mb-4 aspect-[4/3]">
-                <img 
-                  src={tour.image} 
-                  alt={tour.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
-                <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-lg">
-                  <span className="text-sm font-bold text-[#030213] font-['Arimo',sans-serif]">{tour.price}</span>
+          {tours.map((tour, index) => {
+            const CardContent = (
+              <div className="group cursor-pointer">
+                <div className="relative rounded-2xl overflow-hidden mb-4 aspect-[4/3]">
+                  <img 
+                    src={tour.image} 
+                    alt={tour.title}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors" />
+                  <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm px-3 py-1 rounded-lg">
+                    <span className="text-sm font-bold text-[#1C1F23] font-['Arimo',sans-serif]">{tour.price}</span>
+                  </div>
+                </div>
+                <h3 className="text-xl font-bold text-[#1C1F23] mb-1 font-['Arimo',sans-serif] group-hover:text-[#FFDB3A] transition-colors">
+                  {tour.title}
+                </h3>
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-[rgba(3,2,19,0.5)] font-['Arimo',sans-serif]">{tour.duration}</span>
+                  <ChevronRight size={20} className="text-[#FFDB3A] opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transform duration-300" />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-[#030213] mb-1 font-['Arimo',sans-serif] group-hover:text-[#ffc629] transition-colors">
-                {tour.title}
-              </h3>
-              <div className="flex items-center justify-between">
-                <span className="text-sm text-[rgba(3,2,19,0.5)] font-['Arimo',sans-serif]">{tour.duration}</span>
-                <ChevronRight size={20} className="text-[#ffc629] opacity-0 group-hover:opacity-100 transition-opacity -translate-x-2 group-hover:translate-x-0 transform duration-300" />
+            );
+            
+            return tour.slug ? (
+              <Link key={index} to={tour.slug}>
+                {CardContent}
+              </Link>
+            ) : (
+              <div key={index}>
+                {CardContent}
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
-        <button className="md:hidden w-full mt-8 flex items-center justify-center gap-2 border border-[rgba(3,2,19,0.1)] py-4 rounded-xl text-[#030213] font-bold font-['Arimo',sans-serif] hover:bg-gray-50">
+        <button className="md:hidden w-full mt-8 flex items-center justify-center gap-2 border border-[rgba(3,2,19,0.1)] py-4 rounded-xl text-[#1C1F23] font-bold font-['Arimo',sans-serif] hover:bg-gray-50">
           Ver todos los tours <ArrowRight size={20} />
         </button>
       </div>
@@ -81,3 +96,4 @@ const ToursSection = () => {
 };
 
 export default ToursSection;
+

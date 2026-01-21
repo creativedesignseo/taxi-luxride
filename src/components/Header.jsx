@@ -12,39 +12,36 @@ const Header = ({ onNavClick, onCall, phoneDisplay = "+34 625 03 00 00" }) => {
           className="flex items-center gap-3 cursor-pointer"
           onClick={() => onNavClick && onNavClick('top')}
         >
-          <div className="w-10 h-10 bg-[#ffc629] rounded-[14px] flex items-center justify-center">
-            <span className="text-[#030213] font-bold text-lg font-['Arimo',sans-serif]">TL</span>
-          </div>
-          <div className="flex items-baseline gap-1">
-            <span className="text-[#0a0a0a] font-bold text-lg font-['Arimo',sans-serif]">Taxi</span>
-            <span className="text-[#ffc629] font-bold text-lg font-['Arimo',sans-serif]">Lux</span>
-            <span className="text-[#0a0a0a] font-bold text-lg font-['Arimo',sans-serif]">Ride</span>
-          </div>
+          <img 
+            src="/img/logo-light.svg" 
+            alt="Taxi Lux Ride" 
+            className="h-10 w-auto"
+          />
         </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
           <button 
             onClick={() => onNavClick && onNavClick('servicios')}
-            className="text-[#0a0a0a] font-normal text-base font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
           >
             {t('nav.services')}
           </button>
           <button 
             onClick={() => onNavClick && onNavClick('reservar')}
-            className="text-[#0a0a0a] font-normal text-base font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
           >
             {t('nav.rates')}
           </button>
           <button 
             onClick={() => onNavClick && onNavClick('nosotros')}
-            className="text-[#0a0a0a] font-normal text-base font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
           >
             {t('nav.about')}
           </button>
           <button 
             onClick={() => onNavClick && onNavClick('contacto')}
-            className="text-[#0a0a0a] font-normal text-base font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
           >
             {t('nav.contact')}
           </button>
@@ -55,7 +52,7 @@ const Header = ({ onNavClick, onCall, phoneDisplay = "+34 625 03 00 00" }) => {
           {/* Phone Link */}
           <button 
             onClick={onCall}
-            className="flex items-center gap-2 text-[#0a0a0a] font-normal text-base font-['Arimo',sans-serif] hover:text-[#ffc629] transition-colors"
+            className="flex items-center gap-2 text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors"
           >
             <Phone size={16} />
             <span>{t('phone_display')}</span>
@@ -64,7 +61,7 @@ const Header = ({ onNavClick, onCall, phoneDisplay = "+34 625 03 00 00" }) => {
           {/* CTA Button */}
           <button 
             onClick={() => onNavClick && onNavClick('reservar')}
-            className="bg-[#ffc629] text-white font-bold text-sm px-4 py-2 rounded-lg hover:bg-[#e6b324] transition-colors font-['Inter',sans-serif]"
+            className="bg-[#FFDB3A] text-[#1C1F23] font-bold text-sm px-4 py-2 rounded-lg hover:bg-[#E5C434] transition-colors font-['Inter',sans-serif]"
           >
             {t('hero.requestButton')}
           </button>
@@ -74,7 +71,7 @@ const Header = ({ onNavClick, onCall, phoneDisplay = "+34 625 03 00 00" }) => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-[#0a0a0a]">
+        <button className="md:hidden text-[#1C1F23]">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
             <path d="M3 12h18M3 6h18M3 18h18" />
           </svg>

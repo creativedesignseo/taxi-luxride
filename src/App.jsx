@@ -159,7 +159,7 @@ const App = () => {
 
           <button 
             onClick={handleCall} 
-            className="mt-4 w-full bg-[#ffc629] text-[#030213] py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2"
+            className="mt-4 w-full bg-[#FFDB3A] text-[#1C1F23] py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2"
           >
             <Phone /> Llamar
           </button>
@@ -197,7 +197,7 @@ const App = () => {
         <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden flex gap-3">
           <button
             onClick={handleCall}
-            className="flex-1 bg-[#030213] text-white py-3 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 border border-gray-800"
+            className="flex-1 bg-[#1C1F23] text-white py-3 rounded-xl font-bold shadow-lg flex items-center justify-center gap-2 border border-gray-800"
           >
             <Phone size={20} /> Llamar
           </button>
@@ -216,3 +216,4 @@ const App = () => {
 };
 
 export default App;
+
