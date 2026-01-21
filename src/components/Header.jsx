@@ -76,13 +76,16 @@ const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 625 03 00
           <LanguageSwitcher />
         </div>
 
-        {/* Mobile Menu Button */}
-        <button 
-          className="md:hidden text-white p-2"
-          onClick={onMenuClick}
-        >
-          <Menu size={24} />
-        </button>
+        {/* Mobile: Language + Menu Toggle */}
+        <div className="md:hidden flex items-center gap-3">
+          <LanguageSwitcher />
+          <button 
+            className="text-white p-2"
+            onClick={onMenuClick}
+          >
+            <Menu size={28} strokeWidth={2.5} />
+          </button>
+        </div>
       </div>
     </header>
   );
