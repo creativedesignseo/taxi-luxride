@@ -236,7 +236,7 @@ const UberHero = ({ onBooking }) => {
         <div className="flex flex-col lg:flex-row gap-0 lg:gap-24 relative z-10">
           
           {/* Left Column Content */}
-          <div className="flex-1 max-w-[570px]">
+          <div className="flex-1 max-w-[480px]">
              
              {/* Location Selector */}
              <div className="mb-6 flex items-center text-black">
@@ -375,13 +375,13 @@ const UberHero = ({ onBooking }) => {
                 {/* Inputs Wrapper */}
                 <div className="relative isolate">
                    {/* Visual Connector Line */}
-                   <div className="absolute left-[23px] top-[48px] bottom-[48px] w-[2px] bg-black z-0"></div>
+                   <div className="absolute left-[23px] top-[32px] bottom-[32px] w-[2px] bg-black z-20"></div>
 
                    <div className="flex flex-col gap-3">
                       <div className={`relative group ${activeInput === 'origin' ? 'z-20' : 'z-10'}`}>
                          <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-[#FFDB3A]">
                             <div className="absolute left-0 top-0 bottom-0 w-12 flex items-center justify-center z-10">
-                               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-black">
+                               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-black">
                                   <path fillRule="evenodd" clipRule="evenodd" d="M12 23c6.075 0 11-4.925 11-11S18.075 1 12 1 1 5.925 1 12s4.925 11 11 11Zm0-8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" fill="currentColor"></path>
                                </svg>
                             </div>
@@ -436,7 +436,7 @@ const UberHero = ({ onBooking }) => {
                       <div className={`relative group ${activeInput === 'destination' ? 'z-20' : 'z-0'}`}>
                          <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-[#FFDB3A]">
                             <div className="absolute left-0 top-0 bottom-0 w-12 flex items-center justify-center z-10">
-                               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" className="text-black">
+                               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-black">
                                  <path fillRule="evenodd" clipRule="evenodd" d="M22 2H2v20h20V2Zm-7 7H9v6h6V9Z" fill="currentColor"></path>
                                </svg>
                             </div>
