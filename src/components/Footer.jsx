@@ -121,7 +121,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
               <li className="flex items-start gap-3">
                 <Phone size={16} className="text-[#FFDB3A] mt-1 shrink-0" />
                 <div>
-                  <a href="tel:+34625030000" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors block">
+                  <a href="tel:+34631806645" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-[#FFDB3A] transition-colors block">
                     {t('phone_display')}
                   </a>
                   <span className="text-white/40 text-xs">24h disponible</span>
@@ -177,4 +177,5 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
 };
 
 export default Footer;
+
 

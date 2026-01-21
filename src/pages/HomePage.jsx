@@ -25,14 +25,14 @@ const HomePage = () => {
     } else {
       // Fallback for buttons without specific data (like generic CTA or calls from BookingCTA)
       // This preserves the "WhatsApp" behavior for generic interactions
-      const PHONE_NUMBER = "+34625030000";
+      const PHONE_NUMBER = "+34631806645";
       const message = encodeURIComponent("Hola, quiero reservar un taxi.");
       window.open(`https://wa.me/${PHONE_NUMBER}?text=${message}`, '_blank');
     }
   };
 
   const handleCall = () => {
-    window.location.href = "tel:+34625030000";
+    window.location.href = "tel:+34631806645";
   };
 
   return (
@@ -47,3 +47,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+
