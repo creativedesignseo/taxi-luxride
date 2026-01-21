@@ -335,7 +335,11 @@ const UberHero = ({ onBooking }) => {
                   {/* Time Selector */}
                   <div className="relative">
                     <button 
-                      onClick={() => setShowTimeModal(!showTimeModal)}
+                      onClick={() => {
+                        const newState = !showTimeModal;
+                        setShowTimeModal(newState);
+                        if (newState) setShowPassengersModal(false); // Close other modal
+                      }}
                       className="flex items-center gap-2 bg-[#EEEEEE] hover:bg-[#E2E2E2] transition-colors rounded-full pl-3 pr-4 py-2 text-black font-medium text-sm"
                     >
                        <div className="w-5 h-5 flex items-center justify-center">
@@ -351,32 +355,45 @@ const UberHero = ({ onBooking }) => {
                        </div>
                     </button>
                     {showTimeModal && (
-                      <div className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 p-4 min-w-[280px] z-50">
-                        <h3 className="font-bold mb-3 text-lg">¿Cuándo quieres viajar?</h3>
-                        <div className="space-y-2">
-                           <button 
-                             onClick={() => { setBookingType('now'); setShowTimeModal(false); }}
-                             className={`w-full text-left p-3 rounded-lg flex items-center gap-3 ${bookingType === 'now' ? 'bg-black text-white' : 'hover:bg-gray-50'}`}
-                           >
-                             <Clock size={18} />
-                             <span>{t('hero.timeNow')}</span>
-                           </button>
-                           <button 
-                             onClick={() => { setBookingType('scheduled'); setShowCalendarModal(true); setShowTimeModal(false); }}
-                             className={`w-full text-left p-3 rounded-lg flex items-center gap-3 ${bookingType === 'scheduled' ? 'bg-black text-white' : 'hover:bg-gray-50'}`}
-                           >
-                             <Calendar size={18} />
-                             <span>{t('hero.timeLater')}</span>
-                           </button>
-                        </div>
+                      <>
+                        {/* Mobile Backdrop */}
+                        <div 
+                           className="fixed inset-0 bg-black/50 z-[60] md:hidden"
+                           onClick={() => setShowTimeModal(false)}
+                        />
+                        
+                        {/* Modal Content */}
+                        <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[320px] bg-white rounded-xl shadow-xl border border-gray-100 p-4 z-[70] md:absolute md:top-full md:left-0 md:translate-x-0 md:translate-y-0 md:w-auto md:min-w-[280px] md:mt-2">
+                          <h3 className="font-bold mb-3 text-lg">¿Cuándo quieres viajar?</h3>
+                          <div className="space-y-2">
+                             <button 
+                               onClick={() => { setBookingType('now'); setShowTimeModal(false); }}
+                               className={`w-full text-left p-3 rounded-lg flex items-center gap-3 ${bookingType === 'now' ? 'bg-black text-white' : 'hover:bg-gray-50'}`}
+                             >
+                               <Clock size={18} />
+                               <span>{t('hero.timeNow')}</span>
+                             </button>
+                             <button 
+                               onClick={() => { setBookingType('scheduled'); setShowCalendarModal(true); setShowTimeModal(false); }}
+                               className={`w-full text-left p-3 rounded-lg flex items-center gap-3 ${bookingType === 'scheduled' ? 'bg-black text-white' : 'hover:bg-gray-50'}`}
+                             >
+                               <Calendar size={18} />
+                               <span>{t('hero.timeLater')}</span>
+                             </button>
+                          </div>
                       </div>
+                      </>
                     )}
                   </div>
 
                   {/* Passengers Selector */}
                   <div className="relative">
                      <button 
-                       onClick={() => setShowPassengersModal(!showPassengersModal)}
+                       onClick={() => {
+                         const newState = !showPassengersModal;
+                         setShowPassengersModal(newState);
+                         if (newState) setShowTimeModal(false); // Close other modal
+                       }}
                        className="flex items-center gap-2 bg-[#EEEEEE] hover:bg-[#E2E2E2] transition-colors rounded-full pl-3 pr-4 py-2 text-black font-medium text-sm"
                      >
                        <Users size={16} />
@@ -385,8 +402,17 @@ const UberHero = ({ onBooking }) => {
                            <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8Z" fill="currentColor"></path>
                        </svg>
                      </button>
+                     
                      {showPassengersModal && (
-                       <div className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-xl border border-gray-100 p-6 min-w-[300px] z-50">
+                       <>
+                         {/* Mobile Backdrop */}
+                         <div 
+                           className="fixed inset-0 bg-black/50 z-[60] md:hidden"
+                           onClick={() => setShowPassengersModal(false)}
+                         />
+                         
+                         {/* Modal Content */}
+                         <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90vw] max-w-[320px] bg-white rounded-xl shadow-xl border border-gray-100 p-6 z-[70] md:absolute md:top-full md:left-0 md:translate-x-0 md:translate-y-0 md:w-auto md:min-w-[300px] md:mt-2">
                           <div className="mb-6">
                             <label className="text-sm font-bold text-gray-500 mb-2 block uppercase">Pasajeros</label>
                             <div className="flex items-center justify-between bg-gray-50 rounded-lg p-2">
@@ -432,6 +458,7 @@ const UberHero = ({ onBooking }) => {
                              Listo
                           </button>
                        </div>
+                       </>
                      )}
                   </div>
                 </div>
