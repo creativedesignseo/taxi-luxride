@@ -88,6 +88,23 @@ const UberHero = ({ onBooking }) => {
     initLocation();
   }, []);
 
+  // --- AUTOCOMPLETE DEBOUNCE ---
+  useEffect(() => {
+    const timer = setTimeout(async () => {
+      if (activeInput === 'origin' && origin.length > 2) {
+        const results = await getPlaceSuggestions(origin, sessionToken);
+        setSuggestions(results);
+      } else if (activeInput === 'destination' && destination.length > 2) {
+        const results = await getPlaceSuggestions(destination, sessionToken);
+        setSuggestions(results);
+      } else {
+        setSuggestions([]);
+      }
+    }, 400);
+
+    return () => clearTimeout(timer);
+  }, [origin, destination, activeInput, sessionToken]);
+
   // --- HANDLERS ---
 
   const handleSelectPlace = async (feature) => {
