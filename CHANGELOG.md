@@ -6,6 +6,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.9.0] - 2026-01-21
+
+### Changed
+- **Mobile Design Overhaul**:
+  - Updated mobile header to improved Dark Theme (`#1C1F23`) matching the brand identity.
+  - Relocated Language Switcher next to the hamburger menu for better one-thumb usability.
+  - Increased hamburger menu icon size and stroke width (`28px`, `2.5px`) for better visibility.
+  - Adjusted Hero section top padding (`pt-5`) on mobile to prevent content overlap with the new fixed header.
+- **Contact Information**: Updated core business phone/WhatsApp number to `+34 631 80 66 45` across all components (`App.jsx`, `HomePage`, `Footer`, `ToursPage`, `whatsapp.js`).
+
+### Fixed
+- **Mapbox Integration**:
+  - Updated environment variable validation and token configuration to support local development (`localhost`) and production simultaneously.
+  - Fixed "Missing Mapbox Token" issues by implementing a new unrestricted token for flexibility.
+- **Deployment**: Verified production build configuration and confirmed `VITE_MAPBOX_TOKEN` as the single source of truth for map services.
+
 ## [1.8.3] - 2026-01-17
 
 ### Fixed
@@ -294,4 +310,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Optimized usage of images by switching to `.webp` format in Hero section and Language Switcher.
 - Improved application performance by refactoring `MobileLink` component to avoid re-declaration on every render.
 - Cleaned up project files by removing redundant backups (`App.jsx.backup`).
-
