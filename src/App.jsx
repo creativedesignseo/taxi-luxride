@@ -160,7 +160,7 @@ const App = () => {
 
           <button 
             onClick={handleCall} 
-            className="mt-4 w-full bg-[#1C1F23] text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-[#1C1F23]/90 transition-all"
+            className="mt-4 w-full bg-[#1C1F23] text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-[#34373C] transition-all"
           >
             <Phone /> Llamar
           </button>

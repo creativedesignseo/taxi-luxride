@@ -115,7 +115,7 @@ const ToursPage = () => {
                         <div className="flex flex-wrap gap-4 mt-4">
                             <button 
                                 onClick={handleWhatsApp}
-                                className="flex items-center gap-2 bg-[#1C1F23] hover:bg-[#1C1F23]/90 text-white px-6 py-3 rounded-xl font-bold transition-all"
+                                className="flex items-center gap-2 bg-[#1C1F23] hover:bg-[#34373C] text-white px-6 py-3 rounded-xl font-bold transition-all"
                             >
                                 <Phone size={18} />
                                 Reservar Ahora

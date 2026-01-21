@@ -67,7 +67,7 @@ const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 625 03 00
           {/* CTA Button */}
           <button 
             onClick={() => onNavClick && onNavClick('reservar')}
-            className="bg-[#1C1F23] text-white font-bold text-sm px-4 py-2 rounded-lg hover:bg-[#1C1F23]/90 transition-colors font-['Inter',sans-serif]"
+            className="bg-[#1C1F23] text-white font-bold text-sm px-4 py-2 rounded-lg hover:bg-[#34373C] transition-colors font-['Inter',sans-serif]"
           >
             {t('hero.requestButton')}
           </button>

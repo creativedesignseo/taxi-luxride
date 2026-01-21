@@ -110,7 +110,7 @@ const LanguageSwitcher = () => {
                             <button
                                 key={lang.code}
                                 onClick={() => changeLanguage(lang.code)}
-                                className={`w-full px-4 py-3 text-left hover:bg-gray-50 transition-all duration-150 flex items-center gap-3 ${
+                                className={`w-full px-4 py-3 text-left hover:bg-gray-100 transition-all duration-150 flex items-center gap-3 ${
                                     currentLangCode === lang.code 
                                         ? 'bg-gray-100 font-semibold text-black' 
                                         : 'text-gray-700'

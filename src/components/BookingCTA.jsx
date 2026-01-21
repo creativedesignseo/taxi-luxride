@@ -57,7 +57,7 @@ const BookingCTA = ({ onBooking }) => {
                 <button 
                   type="button"
                   onClick={onBooking}
-                  className="w-full bg-[#1C1F23] text-white py-4 rounded-xl font-bold hover:bg-[#1C1F23]/90 transition-colors flex items-center justify-center gap-2 font-['Inter',sans-serif]"
+                  className="w-full bg-[#1C1F23] text-white py-4 rounded-xl font-bold hover:bg-[#34373C] transition-colors flex items-center justify-center gap-2 font-['Inter',sans-serif]"
                 >
                   Solicitar Taxi
                   <ChevronRight size={18} />
