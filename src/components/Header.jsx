@@ -1,21 +1,27 @@
 import { useTranslation } from 'react-i18next';
-import { Phone } from 'lucide-react';
+import { Phone, Menu } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const Header = ({ onNavClick, onCall, phoneDisplay = "+34 625 03 00 00" }) => {
+const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 625 03 00 00" }) => {
   const { t } = useTranslation();
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-black/5">
-      <div className="container mx-auto px-8 h-[85px] flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#1C1F23] md:bg-white border-b border-white/10 md:border-black/5">
+      <div className="container mx-auto px-4 md:px-8 h-[85px] flex items-center justify-between">
         {/* Logo */}
         <div 
           className="flex items-center gap-3 cursor-pointer"
           onClick={() => onNavClick && onNavClick('top')}
         >
+          {/* Dark logo for mobile (dark bg), Light logo for desktop (white bg) */}
+          <img 
+            src="/img/logo-dark.svg" 
+            alt="Taxi Lux Ride" 
+            className="h-10 w-auto md:hidden"
+          />
           <img 
             src="/img/logo-light.svg" 
             alt="Taxi Lux Ride" 
-            className="h-10 w-auto"
+            className="h-10 w-auto hidden md:block"
           />
         </div>
 
@@ -47,7 +53,7 @@ const Header = ({ onNavClick, onCall, phoneDisplay = "+34 625 03 00 00" }) => {
           </button>
         </nav>
 
-        {/* Right Side */}
+        {/* Right Side - Desktop */}
         <div className="hidden md:flex items-center gap-4">
           {/* Phone Link */}
           <button 
@@ -71,10 +77,11 @@ const Header = ({ onNavClick, onCall, phoneDisplay = "+34 625 03 00 00" }) => {
         </div>
 
         {/* Mobile Menu Button */}
-        <button className="md:hidden text-[#1C1F23]">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M3 12h18M3 6h18M3 18h18" />
-          </svg>
+        <button 
+          className="md:hidden text-white p-2"
+          onClick={onMenuClick}
+        >
+          <Menu size={24} />
         </button>
       </div>
     </header>

@@ -121,6 +121,7 @@ const App = () => {
         <Header 
           onNavClick={handleNavClick}
           onCall={handleCall}
+          onMenuClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           phoneDisplay={PHONE_DISPLAY}
         />
       )}
