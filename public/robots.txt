@@ -1,5 +1,4 @@
-# Taxi Movit - Robots Configuration
-# Bloquear acceso a páginas administrativas y técnicas
+# Taxi Lux Ride - Robots Configuration
 
 User-agent: *
 
@@ -21,5 +20,5 @@ Disallow: /*.json$
 Disallow: /*.yml$
 Disallow: /*.config.js$
 
-# Sitemap (cuando lo tengamos)
-Sitemap: https://taximovit.com/sitemap.xml
+# Sitemap
+Sitemap: https://taxiluxride.com/sitemap.xml

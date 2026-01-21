@@ -1,7 +1,7 @@
 {
     "seo": {
-        "title": "Taxi Movit | 巴塞罗那官方出租车与全天候机场接送",
-        "description": "Taxi Movit 是巴塞罗那最好的出租车服务。提供24/7官方预订服务，往返机场、邮轮港口及长途接送。拥有快速许可证，确保安全接送。"
+        "title": "Taxi Lux Ride | 巴塞罗那官方出租车与全天候机场接送",
+        "description": "Taxi Lux Ride 是巴塞罗那最好的出租车服务。提供24/7官方预订服务，往返机场、邮轮港口及长途接送。拥有快速许可证，确保安全接送。"
     },
     "nav": {
         "home": "首页",
@@ -110,13 +110,13 @@
     "footer": {
         "description": "巴塞罗那都会区的官方出租车服务。拥有官方许可证及受监管的资费。",
         "contact": "联系方式",
-        "email": "taximovit@gmail.com",
+        "email": "info@taxiluxride.com",
         "location": "西班牙，巴塞罗那",
         "legal": "法律信息",
         "legalNotice": "法律声明",
         "privacy": "隐私政策",
         "cookies": "Cookies",
-        "copyright": "Taxi Movit"
+        "copyright": "Taxi Lux Ride"
     },
     "mobile": {
         "call": "致电",
@@ -205,3 +205,4 @@
         }
     }
 }
+

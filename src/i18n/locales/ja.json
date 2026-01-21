@@ -1,7 +1,7 @@
 {
     "seo": {
-        "title": "Taxi Movit | バルセロナ公式タクシー＆空港送迎 24時間365日",
-        "description": "Taxi Movitはバルセロナで最高のタクシーサービスです。空港、クルーズ港、長距離への24時間365日の公式予約。迅速なライセンスと安全な送迎。"
+        "title": "Taxi Lux Ride | バルセロナ公式タクシー＆空港送迎 24時間365日",
+        "description": "Taxi Lux Rideはバルセロナで最高のタクシーサービスです。空港、クルーズ港、長距離への24時間365日の公式予約。迅速なライセンスと安全な送迎。"
     },
     "nav": {
         "home": "ホーム",
@@ -110,13 +110,13 @@
     "footer": {
         "description": "バルセロナ都市圏の公式タクシーサービス。公式ライセンスと規制料金。",
         "contact": "お問い合わせ",
-        "email": "taximovit@gmail.com",
+        "email": "info@taxiluxride.com",
         "location": "バルセロナ、スペイン",
         "legal": "法的情報",
         "legalNotice": "法的通知",
         "privacy": "プライバシーポリシー",
         "cookies": "Cookies",
-        "copyright": "Taxi Movit"
+        "copyright": "Taxi Lux Ride"
     },
     "mobile": {
         "call": "電話",
@@ -205,3 +205,4 @@
         }
     }
 }
+

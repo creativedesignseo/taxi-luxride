@@ -71,7 +71,7 @@ export default function BookingPage() {
   return (
     <div className="min-h-screen bg-gray-50 md:bg-white md:flex md:flex-row relative selection:bg-yellow-100">
       <Helmet>
-        <title>{t('seo.bookingTitle', 'Confirmar Reserva - Taxi Movit')}</title>
+        <title>{t('seo.bookingTitle', 'Confirmar Reserva - Taxi Lux Ride')}</title>
       </Helmet>
 
       {/* --- LEFT COLUMN (Desktop) / BOTTOM SHEET (Mobile): FORM --- */}

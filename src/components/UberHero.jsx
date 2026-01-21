@@ -213,7 +213,7 @@ const UberHero = ({ onBooking }) => {
 
 
   return (
-    <section id="inicio" className="w-full bg-white font-sans text-black relative min-h-[calc(100vh-85px)] flex flex-col justify-start lg:justify-center">
+    <section id="inicio" className="w-full bg-white font-sans text-black relative min-h-[calc(100vh-85px)] lg:min-h-[490px] lg:h-[490px] flex flex-col justify-start lg:justify-center">
       <div className="w-full max-w-[1280px] mx-auto px-6 md:px-16 pb-8 relative">
         
         <div className="flex flex-col lg:flex-row gap-0 lg:gap-24 relative z-10">

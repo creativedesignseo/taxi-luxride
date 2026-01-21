@@ -148,5 +148,4 @@ Private - All rights reserved
 ---
 
 **Domain:** taxiluxride.com  
-**Version:** 1.0.0  
-**Based on:** taxi-bcn template
+**Version:** 1.0.0

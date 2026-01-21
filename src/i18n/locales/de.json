@@ -1,7 +1,7 @@
 {
     "seo": {
-        "title": "Taxi Movit | Offizielles Taxi Barcelona & Flughafentransfer 24/7",
-        "description": "Taxi Movit ist der beste Taxidienst in Barcelona. Offizielle 24/7 Buchungen zum Flughafen, Kreuzfahrthafen und Fernstrecken. Schnelle Lizenzen und sichere Transfers."
+        "title": "Taxi Lux Ride | Offizielles Taxi Barcelona & Flughafentransfer 24/7",
+        "description": "Taxi Lux Ride ist der beste Taxidienst in Barcelona. Offizielle 24/7 Buchungen zum Flughafen, Kreuzfahrthafen und Fernstrecken. Schnelle Lizenzen und sichere Transfers."
     },
     "nav": {
         "home": "Startseite",
@@ -110,13 +110,13 @@
     "footer": {
         "description": "Offizieller Taxidienst im Großraum Barcelona. Offizielle Lizenzen und regulierte Tarife.",
         "contact": "Kontakt",
-        "email": "taximovit@gmail.com",
+        "email": "info@taxiluxride.com",
         "location": "Barcelona, Spanien",
         "legal": "Rechtliches",
         "legalNotice": "Impressum",
         "privacy": "Datenschutzerklärung",
         "cookies": "Cookies",
-        "copyright": "Taxi Movit"
+        "copyright": "Taxi Lux Ride"
     },
     "mobile": {
         "call": "Anrufen",
@@ -205,3 +205,4 @@
         }
     }
 }
+
