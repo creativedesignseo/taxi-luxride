@@ -86,12 +86,21 @@ export const reverseGeocode = async (lng, lat) => {
   }
 };
 
-export const getRouteData = async (startCoords, endCoords) => {
+export const getRouteData = async (startCoords, endCoords, waypoints = []) => {
   if (!startCoords || !endCoords) return null;
 
   try {
+    // Build coordinates string: start;waypoint1;waypoint2;...;end
+    let coordsString = startCoords.join(',');
+    if (waypoints && waypoints.length > 0) {
+      waypoints.forEach(wp => {
+        if (wp) coordsString += `;${wp.join(',')}`;
+      });
+    }
+    coordsString += `;${endCoords.join(',')}`;
+
     const response = await fetch(
-      `https://api.mapbox.com/directions/v5/mapbox/driving/${startCoords.join(',')};${endCoords.join(',')}?alternatives=false&geometries=geojson&overview=full&steps=false&access_token=${MAPBOX_TOKEN}`
+      `https://api.mapbox.com/directions/v5/mapbox/driving/${coordsString}?alternatives=false&geometries=geojson&overview=full&steps=false&access_token=${MAPBOX_TOKEN}`
     );
     const data = await response.json();
     

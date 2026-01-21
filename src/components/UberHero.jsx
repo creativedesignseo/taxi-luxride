@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Users, Briefcase, Calendar, Clock, MapPin, Loader2 } from 'lucide-react';
+import { Users, Briefcase, Calendar, Clock, MapPin, Loader2, Plus, Trash2, GripVertical } from 'lucide-react';
 import CustomDatePicker from './CustomDatePicker';
 import { getPlaceSuggestions, getPlaceDetails, getRouteData, reverseGeocode, generateSessionToken } from '../lib/mapbox';
 import { getCurrentLocation } from '../lib/whatsapp';
@@ -9,14 +9,16 @@ const UberHero = ({ onBooking }) => {
   const { t } = useTranslation();
   // --- STATE ---
   const [origin, setOrigin] = useState('');
-  const [destination, setDestination] = useState('');
   const [originCoords, setOriginCoords] = useState(null);
   const [locationLabel, setLocationLabel] = useState(t('hero.immediate') === 'Ahora' ? 'Detectando...' : 'Detecting...');
-  const [destCoords, setDestCoords] = useState(null);
+  
+  // Multiple stops support (Uber-style)
+  const [stops, setStops] = useState([{ id: 'stop-' + Date.now(), address: '', coords: null }]);
+  const MAX_STOPS = 3;
   
   // Search / Autocomplete
   const [suggestions, setSuggestions] = useState([]);
-  const [activeInput, setActiveInput] = useState(null); // 'origin' | 'destination'
+  const [activeInput, setActiveInput] = useState(null); // 'origin' | 'stop-0' | 'stop-1' | etc
   const [sessionToken] = useState(generateSessionToken());
   const [isLoadingLocation, setIsLoadingLocation] = useState(false);
   const [isRouting, setIsRouting] = useState(false);
@@ -94,16 +96,22 @@ const UberHero = ({ onBooking }) => {
       if (activeInput === 'origin' && origin.length > 2) {
         const results = await getPlaceSuggestions(origin, sessionToken);
         setSuggestions(results);
-      } else if (activeInput === 'destination' && destination.length > 2) {
-        const results = await getPlaceSuggestions(destination, sessionToken);
-        setSuggestions(results);
+      } else if (activeInput?.startsWith('stop-')) {
+        const stopIndex = parseInt(activeInput.split('-')[1]);
+        const stopAddress = stops[stopIndex]?.address || '';
+        if (stopAddress.length > 2) {
+          const results = await getPlaceSuggestions(stopAddress, sessionToken);
+          setSuggestions(results);
+        } else {
+          setSuggestions([]);
+        }
       } else {
         setSuggestions([]);
       }
     }, 400);
 
     return () => clearTimeout(timer);
-  }, [origin, destination, activeInput, sessionToken]);
+  }, [origin, stops, activeInput, sessionToken]);
 
   // --- HANDLERS ---
 
@@ -130,12 +138,61 @@ const UberHero = ({ onBooking }) => {
       // Update top label context based on new origin
       const newContext = await reverseGeocode(coords[0], coords[1]);
       if (newContext) updateLocationLabel(newContext);
-    } else {
-      setDestination(placeName);
-      setDestCoords(coords);
+    } else if (activeInput?.startsWith('stop-')) {
+      // Find index by ID or keep using index from activeInput string if it matches rendered order? 
+      // activeInput is set as `stop-${index}` in render.
+      // So retrieving by index is still correct as long as we update state immutably.
+      const stopIndex = parseInt(activeInput.split('-')[1]);
+      setStops(prev => {
+        const newStops = [...prev];
+        newStops[stopIndex] = { ...newStops[stopIndex], address: placeName, coords };
+        return newStops;
+      });
     }
     setSuggestions([]);
     setActiveInput(null);
+  };
+
+  // Add/Remove stops handlers
+  const addStop = () => {
+    if (stops.length < MAX_STOPS) {
+      setStops(prev => [...prev, { id: 'stop-' + Date.now() + Math.random(), address: '', coords: null }]);
+    }
+  };
+
+  const removeStop = (index) => {
+    if (stops.length > 1) {
+      setStops(prev => prev.filter((_, i) => i !== index));
+    }
+  };
+
+  const updateStopAddress = (index, address) => {
+    setStops(prev => {
+      const newStops = [...prev];
+      newStops[index] = { ...newStops[index], address, coords: null };
+      return newStops;
+    });
+  };
+
+  // Reorder stops
+  const moveStopUp = (index) => {
+    if (index > 0) {
+      setStops(prev => {
+        const newStops = [...prev];
+        [newStops[index - 1], newStops[index]] = [newStops[index], newStops[index - 1]];
+        return newStops;
+      });
+    }
+  };
+
+  const swapStops = (index1, index2) => {
+    if (index1 >= 0 && index2 >= 0 && index1 < stops.length && index2 < stops.length) {
+      setStops(prev => {
+        const newStops = [...prev];
+        [newStops[index1], newStops[index2]] = [newStops[index2], newStops[index1]];
+        return newStops;
+      });
+    }
   };
 
   const handleUseMyLocation = async () => {
@@ -165,16 +222,22 @@ const UberHero = ({ onBooking }) => {
   };
 
   const handleBookingClick = async () => {
-     if (!originCoords || !destCoords) {
-        // Fallback or alert if user tries to click without full data
-        // If we strictly follow the flow, we should disable the button or show error
+     // Validate: origin + at least first stop must have coords
+     const finalStop = stops[stops.length - 1];
+     const hasAllCoords = originCoords && finalStop?.coords;
+     
+     if (!hasAllCoords) {
         alert("Por favor selecciona origen y destino de la lista");
         return;
      }
 
      setIsRouting(true);
-     // 1. Calculate Route
-     const routeData = await getRouteData(originCoords, destCoords);
+     
+     // Build waypoints array for route calculation
+     const allCoords = [originCoords, ...stops.filter(s => s.coords).map(s => s.coords)];
+     
+     // Calculate route (origin -> waypoints -> final destination)
+     const routeData = await getRouteData(allCoords[0], allCoords[allCoords.length - 1], allCoords.slice(1, -1));
      
      setIsRouting(false);
 
@@ -183,16 +246,17 @@ const UberHero = ({ onBooking }) => {
         return;
      }
 
-     // 2. Prepare Booking Data
+     // Prepare Booking Data with all stops
      const bookingData = {
         origin: { address: origin, coordinates: originCoords },
-        destination: { address: destination, coordinates: destCoords },
+        stops: stops.filter(s => s.coords).map(s => ({ address: s.address, coordinates: s.coords })),
+        destination: { address: finalStop.address, coordinates: finalStop.coords },
         date: bookingType === 'now' ? 'Ahora' : selectedDate,
         time: bookingType === 'now' ? 'Inmediato' : selectedTime,
         passengers,
         luggage,
         vehicle: vehicles.find(v => v.id === selectedVehicle)?.name || 'Standard',
-        price: 'Approx', // Calculated later or rough estimate
+        price: 'Approx',
         timeEstimate: Math.round(routeData.durationSeconds / 60)
      };
 
@@ -201,7 +265,7 @@ const UberHero = ({ onBooking }) => {
         bookingData,
         routeGeometry: routeData.geometry,
         originCoords,
-        destCoords
+        destCoords: finalStop.coords
      });
   };
 
@@ -432,48 +496,84 @@ const UberHero = ({ onBooking }) => {
                          )}
                       </div>
 
-                      {/* Destination Input */}
-                      <div className={`relative group ${activeInput === 'destination' ? 'z-20' : 'z-0'}`}>
-                         <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-[#FFDB3A]">
-                            <div className="absolute left-0 top-0 bottom-0 w-12 flex items-center justify-center z-10">
-                               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-black">
-                                 <path fillRule="evenodd" clipRule="evenodd" d="M22 2H2v20h20V2Zm-7 7H9v6h6V9Z" fill="currentColor"></path>
-                               </svg>
-                            </div>
-                            <input 
-                               type="text" 
-                               value={destination}
-                               onChange={(e) => { setDestination(e.target.value); setDestCoords(null); }}
-                               onFocus={() => setActiveInput('destination')}
-                               placeholder={t('hero.destinationPlaceholder')}
-                               className="w-full h-full bg-transparent border-none outline-none text-base font-normal text-black placeholder:text-[#5E5E5E] font-['Inter',sans-serif] pl-12 pr-4 py-3.5"
-                            />
-                            {destination && (
-                               <div onClick={() => setDestination('')} className="absolute right-0 top-0 bottom-0 w-12 flex items-center justify-center z-10 cursor-pointer text-gray-500 hover:text-black">✕</div>
-                            )}
-                         </div>
+                      {/* Stops Inputs (Multiple Destinations) */}
+                      {stops.map((stop, index) => (
+                        <div key={stop.id} className={`relative group ${activeInput === `stop-${index}` ? 'z-20' : 'z-0'}`}>
+                          <div className="w-full min-h-[56px] bg-[#F3F3F3] rounded-xl flex items-center relative transition-colors cursor-text hover:bg-[#E8E8E8] border border-transparent focus-within:bg-white focus-within:ring-2 focus-within:ring-[#FFDB3A]">
+                             <div className="absolute left-0 top-0 bottom-0 w-12 flex items-center justify-center z-10">
+                                {/* Square icon for last stop, number for intermediate */}
+                                {index === stops.length - 1 ? (
+                                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" className="text-black">
+                                    <path fillRule="evenodd" clipRule="evenodd" d="M22 2H2v20h20V2Zm-7 7H9v6h6V9Z" fill="currentColor"></path>
+                                  </svg>
+                                ) : (
+                                  <span className="w-5 h-5 bg-black text-white rounded-sm text-xs font-bold flex items-center justify-center">{index + 1}</span>
+                                )}
+                             </div>
+                             <input 
+                                type="text" 
+                                value={stop.address}
+                                onChange={(e) => updateStopAddress(index, e.target.value)}
+                                onFocus={() => setActiveInput(`stop-${index}`)}
+                                placeholder={index === 0 ? t('hero.destinationPlaceholder') : t('hero.addStopPlaceholder', 'Añadir parada')}
+                                className="w-full h-full bg-transparent border-none outline-none text-base font-normal text-black placeholder:text-[#5E5E5E] font-['Inter',sans-serif] pl-12 pr-16 py-3.5"
+                             />
+                             <div className="absolute right-0 top-0 bottom-0 flex items-center gap-0 pr-2 z-10">
+                               {/* Reorder grip (only for intermediate stops, not first) */}
+                               {stops.length > 1 && index > 0 && (
+                                 <button 
+                                   onClick={() => moveStopUp(index)} 
+                                   className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-black transition-colors cursor-grab active:cursor-grabbing"
+                                   title="Mover parada arriba"
+                                 >
+                                   <GripVertical size={18} />
+                                 </button>
+                               )}
+                               {/* Clear/Remove button */}
+                               {stops.length > 1 && (
+                                 <button 
+                                   onClick={() => removeStop(index)} 
+                                   className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-red-500 transition-colors"
+                                   title="Eliminar parada"
+                                 >
+                                   <Trash2 size={16} />
+                                 </button>
+                               )}
+                               {/* Add stop button (only on last stop) */}
+                               {index === stops.length - 1 && stops.length < MAX_STOPS && (
+                                 <button 
+                                   onClick={addStop} 
+                                   className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-black transition-colors"
+                                   title="Añadir parada intermedia"
+                                 >
+                                   <Plus size={22} strokeWidth={2.5} />
+                                 </button>
+                               )}
+                             </div>
+                          </div>
 
-                         {/* Destination Suggestions */}
-                         {activeInput === 'destination' && suggestions.length > 0 && (
-                            <div className="absolute top-full left-0 right-0 z-50 bg-white shadow-xl rounded-b-lg border border-t-0 border-gray-100 max-h-[300px] overflow-y-auto">
-                               {suggestions.map(s => (
-                                  <div 
-                                    key={s.id} 
-                                    onClick={() => handleSelectPlace(s)}
-                                    className="p-3 border-b border-gray-50 hover:bg-gray-50 cursor-pointer flex items-center gap-3"
-                                  >
-                                     <div className="bg-[#EEE] p-2 rounded-full">
-                                        <MapPin size={16} />
-                                     </div>
-                                     <div>
-                                        <p className="text-sm font-bold">{s.name}</p>
-                                        <p className="text-xs text-gray-500">{s.full_address}</p>
-                                     </div>
-                                  </div>
-                               ))}
-                            </div>
-                         )}
-                      </div>
+                          {/* Stop Suggestions */}
+                          {activeInput === `stop-${index}` && suggestions.length > 0 && (
+                             <div className="absolute top-full left-0 right-0 z-50 bg-white shadow-xl rounded-b-lg border border-t-0 border-gray-100 max-h-[300px] overflow-y-auto">
+                                {suggestions.map(s => (
+                                   <div 
+                                     key={s.id} 
+                                     onClick={() => handleSelectPlace(s)}
+                                     className="p-3 border-b border-gray-50 hover:bg-gray-50 cursor-pointer flex items-center gap-3"
+                                   >
+                                      <div className="bg-[#EEE] p-2 rounded-full">
+                                         <MapPin size={16} />
+                                      </div>
+                                      <div>
+                                         <p className="text-sm font-bold">{s.name}</p>
+                                         <p className="text-xs text-gray-500">{s.full_address}</p>
+                                      </div>
+                                   </div>
+                                ))}
+                             </div>
+                          )}
+                       </div>
+                      ))}
                    </div>
                 </div>
 

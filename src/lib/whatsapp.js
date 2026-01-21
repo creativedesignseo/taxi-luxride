@@ -22,8 +22,19 @@ export function generateWhatsAppLink(bookingData, userData) {
   
   const originMapLink = `https://www.google.com/maps?q=${originLat},${originLng}`;
   const destMapLink = `https://www.google.com/maps?q=${destLat},${destLng}`;
-  
 
+  // Build Intermediate Stops section
+  let stopsMessage = '';
+  // bookingData.stops contains all stops including the final destination.
+  // We want to show only intermediate stops here, so we slice excluding the last one.
+  if (bookingData.stops && bookingData.stops.length > 1) {
+    const intermediateStops = bookingData.stops.slice(0, -1);
+    stopsMessage = intermediateStops.map((stop, index) => {
+      const stopLat = stop.coordinates[1];
+      const stopLng = stop.coordinates[0];
+      return `\n*Parada ${index + 1}:* ${stop.address}\nVer en mapa: https://www.google.com/maps?q=${stopLat},${stopLng}\n`;
+    }).join('');
+  }
   
   const message = `Hola, quiero reservar un taxi:
 
@@ -34,7 +45,7 @@ export function generateWhatsAppLink(bookingData, userData) {
 
 *Origen:* ${bookingData.origin.address}
 Ver en mapa: ${originMapLink}
-
+${stopsMessage}
 *Destino:* ${bookingData.destination.address}
 Ver en mapa: ${destMapLink}
 

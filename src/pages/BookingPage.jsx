@@ -32,6 +32,7 @@ export default function BookingPage() {
   const routeGeometry = location.state?.routeGeometry;
   const originCoords = location.state?.originCoords;
   const destCoords = location.state?.destCoords;
+  const stops = bookingData?.stops || [];
 
   const { register, handleSubmit } = useForm({
     defaultValues: {
@@ -94,20 +95,35 @@ export default function BookingPage() {
 
         {/* Route Summary Card */}
         <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100 mb-8 transition-all hover:bg-gray-100/80">
-          <div className="relative pl-6 space-y-6 border-l-2 border-dashed border-gray-300 ml-2">
+          <div className="relative pl-6 ml-2">
+            {/* Connector Line - positioned to connect dot centers */}
+            <div className="absolute left-[7px] top-[10px] bottom-[20px] w-[2px] border-l-2 border-dashed border-gray-300"></div>
             
-            {/* Origin */}
-            <div className="relative">
-               <div className="absolute -left-[31px] top-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow-sm"></div>
-               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{t('booking.modal.from', 'RECOGIDA')}</p>
-               <p className="text-gray-900 font-semibold leading-tight">{bookingData.origin.address}</p>
-            </div>
+            <div className="space-y-6">
+              {/* Origin */}
+              <div className="relative">
+                 <div className="absolute -left-[25px] top-1 w-4 h-4 bg-yellow-400 rounded-full border-2 border-white shadow-sm"></div>
+                 <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{t('booking.modal.from', 'RECOGIDA')}</p>
+                 <p className="text-gray-900 font-semibold leading-tight">{bookingData.origin.address}</p>
+              </div>
 
-            {/* Destination */}
-            <div className="relative">
-               <div className="absolute -left-[31px] top-1 w-4 h-4 bg-black rounded-full border-2 border-white shadow-sm"></div>
-               <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{t('booking.modal.to', 'DESTINO')}</p>
-               <p className="text-gray-900 font-semibold leading-tight">{bookingData.destination.address}</p>
+              {/* Intermediate Stops */}
+              {stops.slice(0, -1).map((stop, index) => (
+                <div key={`stop-${index}`} className="relative">
+                  <div className="absolute -left-[25px] top-1 w-4 h-4 bg-black rounded-full border-2 border-white shadow-sm flex items-center justify-center">
+                    <span className="text-[8px] text-white font-bold">{index + 1}</span>
+                  </div>
+                  <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{t('booking.modal.stop', 'PARADA')} {index + 1}</p>
+                  <p className="text-gray-900 font-semibold leading-tight">{stop.address}</p>
+                </div>
+              ))}
+
+              {/* Destination */}
+              <div className="relative">
+                 <div className="absolute -left-[25px] top-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white shadow-sm"></div>
+                 <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-1">{t('booking.modal.to', 'DESTINO')}</p>
+                 <p className="text-gray-900 font-semibold leading-tight">{bookingData.destination.address}</p>
+              </div>
             </div>
           </div>
 
@@ -188,7 +204,8 @@ export default function BookingPage() {
             <RouteMap 
                originCoords={originCoords} 
                destCoords={destCoords} 
-               routeGeometry={routeGeometry} 
+               routeGeometry={routeGeometry}
+               stops={stops}
             />
             
             {/* Gradient Overlay for Mobile Bottom Blend */}

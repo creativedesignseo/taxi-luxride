@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.10.0] - 2026-01-21
+
+### Added
+- **Intermediate Stops Feature**: Users can now add up to 3 intermediate stops to their booking.
+  - **Dynamic UI**: Added "+" and trash icons to manage stops.
+  - **Reordering**: Added functionality (grip icon) to reorder stops (currently internal logic ready).
+  - **Map Upgrade**: Route map now displays numbered markers (black badges) for all intermediate stops.
+  - **WhatsApp**: Updated message format to include all intermediate stops with Google Maps links, avoiding duplication of the final destination.
+- **Route Visuals**: Improved the dashed connector line in the booking confirmation panel to align perfectly with stop indicators.
+
 ## [1.9.0] - 2026-01-21
 
 ### Changed

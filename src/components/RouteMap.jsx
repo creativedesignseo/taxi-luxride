@@ -5,7 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 const MAPBOX_TOKEN = import.meta.env.VITE_MAPBOX_TOKEN;
 
-const RouteMap = ({ originCoords, destCoords, routeGeometry }) => {
+const RouteMap = ({ originCoords, destCoords, routeGeometry, stops = [] }) => {
   const mapRef = useRef(null);
 
   // Function to fit map to markers and route
@@ -18,12 +18,19 @@ const RouteMap = ({ originCoords, destCoords, routeGeometry }) => {
     bounds.extend(originCoords);
     bounds.extend(destCoords);
 
-    // 2. Include the Route path if available
+    // 2. Include intermediate stops
+    stops.forEach(stop => {
+      if (stop?.coordinates) {
+        bounds.extend(stop.coordinates);
+      }
+    });
+
+    // 3. Include the Route path if available
     if (routeGeometry && routeGeometry.coordinates) {
       routeGeometry.coordinates.forEach(coord => bounds.extend(coord));
     }
 
-    // 3. Fit bounds with responsive padding
+    // 4. Fit bounds with responsive padding
     if (!bounds.isEmpty()) {
       const isMobile = window.innerWidth < 768;
       const padding = isMobile 
@@ -35,7 +42,7 @@ const RouteMap = ({ originCoords, destCoords, routeGeometry }) => {
         duration: 1000
       });
     }
-  }, [originCoords, destCoords, routeGeometry]);
+  }, [originCoords, destCoords, routeGeometry, stops]);
 
   useEffect(() => {
     if (mapRef.current) {
@@ -65,10 +72,25 @@ const RouteMap = ({ originCoords, destCoords, routeGeometry }) => {
         attributionControl={false}
         onLoad={(e) => fitMapToRoute(e.target)}
       >
-        {/* Origin Marker */}
+        {/* Origin Marker (Yellow) */}
         <Marker longitude={originCoords[0]} latitude={originCoords[1]} color="#EAB308" />
 
-        {/* Destination Marker */}
+        {/* Intermediate Stop Markers (Black numbered badges) */}
+        {stops.slice(0, -1).map((stop, index) => (
+          stop?.coordinates && (
+            <Marker 
+              key={`stop-${index}`}
+              longitude={stop.coordinates[0]} 
+              latitude={stop.coordinates[1]}
+            >
+              <div className="w-6 h-6 bg-black text-white rounded-sm text-xs font-bold flex items-center justify-center shadow-lg">
+                {index + 1}
+              </div>
+            </Marker>
+          )
+        ))}
+
+        {/* Destination Marker (Green) */}
         <Marker longitude={destCoords[0]} latitude={destCoords[1]} color="#22C55E" />
 
         {/* Route Line */}
@@ -95,3 +117,4 @@ const RouteMap = ({ originCoords, destCoords, routeGeometry }) => {
 };
 
 export default RouteMap;
+
