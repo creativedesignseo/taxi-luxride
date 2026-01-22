@@ -45,7 +45,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
     <footer id="contacto" className="bg-[#1C1F23] text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-8 py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           
           {/* Logo & Description */}
           <div className="lg:col-span-1">
@@ -75,23 +75,6 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <Linkedin size={16} className="text-white" />
               </a>
             </div>
-          </div>
-
-          {/* Tours Links */}
-          <div>
-            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">Tours Urbanos</h4>
-            <ul className="space-y-3">
-              {tourLinks.map((link, i) => (
-                <li key={i}>
-                  <Link 
-                    to={link.to}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
           </div>
 
           {/* Destinations Links */}
