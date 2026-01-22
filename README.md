@@ -51,9 +51,34 @@ The app will be available at `http://localhost:5173`
 - `npm run build` - Build for production
 - `npm run preview` - Preview production build
 - `npm run lint` - Run ESLint
-- `npm run convert-to-webp` - Convert new images to WebP
+- `npm run convert-to-webp` - Convert legacy images to WebP
 - `npm run clean-duplicates` - Remove duplicate PNG/JPG files
-- `npm run optimize-images` - Manually optimize images
+- `npm run generate-assets` - **NEW!** Generate optimized assets from raw images
+
+## 🏭 Image Factory (Auto-Optimization)
+
+We use an automated pipeline to generate perfect images for every device.
+
+1.  **Drop your raw images** (jpg/png high-res) into:
+    `src/assets/raw/`
+
+2.  **Run the generator:**
+    ```bash
+     npm run generate-assets
+    ```
+    *Or use watch mode to auto-process as you add files:*
+    ```bash
+     npm run generate-assets -- --watch
+    ```
+
+3.  **Result:**
+    Optimized WebP versions (cards, hero banners, thumbnails) will appear in:
+    `public/img/optimized/`
+
+4.  **Usage in Code:**
+    ```jsx
+    <img src="/img/optimized/my-photo-card.webp" />
+    ```
 
 ## ⚙️ Configuration
 

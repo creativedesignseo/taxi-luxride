@@ -52,7 +52,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "110 km",
     price: null,
-    image: "/img/Sagrada-familia-02.webp", // Placeholder
+    image: "/img/optimized/portaventura-hero.webp",
+    cardImage: "/img/optimized/portaventura-card.webp",
     itinerary: [
       { time: '09:00', desc: { es: 'Salida de Barcelona', en: 'Departure from Barcelona', it: 'Partenza da Barcellona' } },
       { time: '10:15', desc: { es: 'Llegada a PortAventura', en: 'Arrival at PortAventura', it: 'Arrivo a PortAventura' } },
@@ -81,7 +82,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "140 km",
     price: null,
-    image: "/img/Sagrada-familia-02.webp", // Placeholder
+    image: "/img/optimized/Tour-Museo-Dalí-(Figueres)-hero.webp",
+    cardImage: "/img/optimized/Tour-Museo-Dalí-(Figueres)-card.webp", // Placeholder
     itinerary: [
       { time: '08:30', desc: { es: 'Salida de Barcelona', en: 'Departure from Barcelona', it: 'Partenza da Barcellona' } },
       { time: '10:30', desc: { es: 'Visita Museo Dalí', en: 'Dalí Museum Visit', it: 'Visita Museo Dalí' } },
@@ -111,7 +113,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "80-100 km",
     price: null,
-    image: "/img/Sagrada-familia-02.webp", // Placeholder
+    image: "/img/optimized/Costa-Brava-hero.webp",
+    cardImage: "/img/optimized/Costa-Brava-card.webp",
     itinerary: [
       { time: '09:00', desc: { es: 'Salida', en: 'Departure', it: 'Partenza' } },
       { time: '10:30', desc: { es: 'Lloret / Tossa de Mar', en: 'Lloret / Tossa de Mar', it: 'Lloret / Tossa de Mar' } },
@@ -141,7 +144,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "100 km",
     price: null,
-    image: "/img/Sagrada-familia-02.webp", // Placeholder
+    image: "/img/optimized/costa-dorada-hero.webp",
+    cardImage: "/img/optimized/costa-dorada-card.webp",
     itinerary: [
       { time: '09:00', desc: { es: 'Salida', en: 'Departure', it: 'Partenza' } },
       { time: '10:00', desc: { es: 'Sitges', en: 'Sitges', it: 'Sitges' } },

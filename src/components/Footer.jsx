@@ -1,34 +1,48 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const location = useLocation();
   
+  const handleScrollNav = (sectionId) => {
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) element.scrollIntoView({ behavior: 'smooth' });
+      }, 500);
+    } else {
+      const element = document.getElementById(sectionId);
+      if (element) element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const tourLinks = [
-    { name: 'Barcelona City & Miradores', href: '#' },
-    { name: 'Sagrada Familia & Gaudí', href: '#' },
-    { name: 'Camp Nou & Museos', href: '#' },
-    { name: 'Barcelona Nocturna', href: '#' },
+    { name: 'Barcelona City & Miradores', to: '/tours' },
+    { name: 'Sagrada Familia & Gaudí', to: '/tours' },
+    { name: 'Camp Nou & Museos', to: '/tours' },
+    { name: 'Barcelona Nocturna', to: '/tours' },
   ];
 
   const destinationLinks = [
-    { name: 'Costa Brava: Lloret', href: '#' },
-    { name: 'Montserrat', href: '#' },
-    { name: 'Sitges & Tarragona', href: '#' },
-    { name: 'Girona Medieval', href: '#' },
+    { name: 'Costa Brava: Lloret', to: '/tour/costa-brava' },
+    { name: 'Montserrat', to: '/tour/montserrat' },
+    { name: 'Sitges & Tarragona', to: '/tour/costa-dorada' },
+    { name: 'Girona Medieval', to: '/tour/dali-museum' }, // Closest match, or keep /tours
   ];
 
   const companyLinks = [
-    { name: t('nav.home'), href: '#nosotros' },
-    { name: t('nav.services'), href: '#servicios' },
-    { name: t('nav.rates'), href: '#tarifas' },
-    { name: t('nav.contact'), href: '#contacto' },
+    { name: t('nav.home'), id: 'top' },
+    { name: t('nav.services'), id: 'servicios' },
+    { name: t('nav.rates'), id: 'reservar' },
+    { name: t('nav.contact'), id: 'contacto' },
   ];
 
   return (
-    <footer className="bg-[#1C1F23] text-white">
+    <footer id="contacto" className="bg-[#1C1F23] text-white">
       {/* Main Footer Content */}
       <div className="container mx-auto px-8 py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
@@ -69,12 +83,12 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
             <ul className="space-y-3">
               {tourLinks.map((link, i) => (
                 <li key={i}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.to}
                     className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -86,12 +100,12 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
             <ul className="space-y-3">
               {destinationLinks.map((link, i) => (
                 <li key={i}>
-                  <a 
-                    href={link.href}
+                  <Link 
+                    to={link.to}
                     className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -103,12 +117,12 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
             <ul className="space-y-3">
               {companyLinks.map((link, i) => (
                 <li key={i}>
-                  <a 
-                    href={link.href}
-                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors"
+                  <button 
+                    onClick={() => handleScrollNav(link.id)}
+                    className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors text-left"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>
