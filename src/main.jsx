@@ -9,7 +9,7 @@ import App from './App.jsx'
 import ErrorBoundary from './components/ErrorBoundary';
 
 // Supported languages for URL-based routing
-const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru'];
+const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru', 'it'];
 const DEFAULT_LANGUAGE = 'es';
 
 /**

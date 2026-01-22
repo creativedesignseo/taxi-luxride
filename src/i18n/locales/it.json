@@ -1,0 +1,216 @@
+{
+  "seo": {
+    "title": "Taxi Lux Ride - Servizio Taxi Premium 24h",
+    "description": "Taxi Lux Ride - Il miglior servizio taxi premium. Prenotazione ufficiale 24h per Aeroporto, Porto e lunghe distanze. Taxi veloci e sicuri."
+  },
+  "mobile": {
+    "call": "Chiama",
+    "whatsapp": "WhatsApp"
+  },
+  "nav": {
+    "home": "Home",
+    "services": "Servizi",
+    "rates": "Assistenza",
+    "tours": "Tour",
+    "about": "Chi Siamo",
+    "contact": "Contatti"
+  },
+  "payment": {
+    "title": "Metodi di Pagamento Accettati",
+    "subtitle": "Facilità e sicurezza in ogni viaggio",
+    "visa": "Visa",
+    "mastercard": "Mastercard",
+    "cash": "Contanti",
+    "cards": "Carte"
+  },
+  "phone_display": "+34 631 80 66 45",
+  "rates": {
+    "active": true,
+    "port": "Porto Crociere",
+    "consultRate": "Consultare",
+    "parkGuell": "Park Güell",
+    "tariff1": "Tariffa 1 (Giorno)",
+    "tariff2": "Tariffa 2 (Notte/Weekend)",
+    "subtitle": "Assistenza specializzata per ogni necessità nei tuoi viaggi.",
+    "title": "Attrezzature e Assistenza",
+    "sants": "Stazione Sants",
+    "babySeat": "Seggiolini per Bambini",
+    "babySeatDesc": "Ovetti e seggiolini gruppo 0+ omologati per i più piccoli.",
+    "petFriendly": "Animali Ammessi (Pet Friendly)",
+    "petFriendlyDesc": "Viaggia con il tuo migliore amico. Accettiamo cani e animali domestici con totale comfort e sicurezza.",
+    "pmr": "Taxi Adattato (PMR)",
+    "pmrDesc": "Veicoli Eurotaxi adattati per sedie a rotelle e mobilità ridotta.",
+    "babySeatMsg": "Ciao, vorrei prenotare un taxi con seggiolino per bambini (Ovetto / Gruppo 0+).",
+    "petFriendlyMsg": "Ciao, vorrei prenotare un taxi che accetta animali domestici (Pet Friendly).",
+    "pmrMsg": "Ciao, vorrei prenotare un taxi adattato PMR per sedia a rotelle.",
+    "bigLuggage": "Taxi XL 7-8 Persone e Bagagliaio",
+    "bigLuggageDesc": "Veicoli monovolume ideali per gruppi, famiglie e trasferimenti con molto bagaglio.",
+    "bigLuggageMsg": "Ciao, vorrei prenotare un taxi XL per 7 persone con ampio bagagliaio."
+  },
+  "testimonials": {
+    "title": "Cosa Dicono i Nostri Clienti",
+    "subtitle": "Migliaia di viaggiatori si fidano di noi ogni mese",
+    "reviews_count": "recensioni",
+    "verified": "Recensioni verificate da clienti reali",
+    "reviews": [
+      {
+        "text": "Il miglior servizio taxi che abbia mai usato a Barcellona. Veloce, pulito e l'autista super gentile.",
+        "name": "Laura M.",
+        "location": "Barcellona, Spagna"
+      },
+      {
+        "text": "Sono arrivato all'aeroporto senza problemi. Il tassista mi aspettava con un cartello e mi ha aiutato con le valigie. Molto professionale.",
+        "name": "Carlos R.",
+        "location": "Madrid, Spagna"
+      },
+      {
+        "text": "Ho prenotato un taxi XL per la mia famiglia (eravamo 6 persone) ed è stato perfetto. Spazioso, comodo e puntuale. Raccomandato al 100%.",
+        "name": "Ana G.",
+        "location": "Valencia, Spagna"
+      },
+      {
+        "text": "Ho viaggiato con il mio cane e non ho avuto alcun problema. L'autista è stato molto gentile e l'auto era impeccabile. Userò di nuovo il servizio.",
+        "name": "Miguel S.",
+        "location": "Saragozza, Spagna"
+      },
+      {
+        "text": "Ottimo rapporto qualità-prezzo. Il tragitto dal porto all'hotel è stato veloce e il tassista molto educato. Senza dubbio, la migliore opzione a Barcellona.",
+        "name": "Patricia L.",
+        "location": "Siviglia, Spagna"
+      }
+    ]
+  },
+  "faq": {
+    "q1": "È possibile prenotare un trasferimento per l'Aeroporto in anticipo?",
+    "q2": "Fin dove arrivano i vostri servizi?",
+    "q3": "Siamo un gruppo o abbiamo bagagli voluminosi, avete una soluzione?",
+    "q4": "Il servizio è operativo di notte o nei giorni festivi?",
+    "q5": "Quali metodi di pagamento accettate?",
+    "a1": "Certamente! Consigliamo di prenotare in anticipo per assicurare il posto, specialmente nelle ore di punta. Il tuo autista ti aspetterà puntuale, controllando l'orario del tuo volo.",
+    "a2": "Copriamo tutta l'Area Metropolitana di Barcellona ed effettuiamo trasferimenti a lunga distanza verso qualsiasi punto della Catalogna o città nazionali (Girona, Tarragona, ecc.).",
+    "a3": "Sì, disponiamo di una flotta versatile che include veicoli monovolume fino a 6-7 posti. Avvisaci al momento della prenotazione.",
+    "a4": "Operiamo ininterrottamente 24 ore al giorno, 365 giorni all'anno. Che sia un volo all'alba o un'uscita notturna, siamo sempre disponibili.",
+    "a5": "Accettiamo contanti, carte di credito (Visa, Mastercard) e carte di debito direttamente nel taxi.",
+    "title": "Hai dubbi? Ti aiutiamo"
+  },
+  "hero": {
+    "requestButton": "Richiedi Taxi",
+    "ctaWhatsApp": "Ordina via WhatsApp",
+    "titleEnd": "senza attese.",
+    "badge": "Servizio ufficiale 24h",
+    "destinationPlaceholder": "Destinazione (Opzionale)",
+    "timeNow": "Il prima possibile (Adesso)",
+    "time30": "Tra 30 minuti",
+    "ctaCall": "Chiama",
+    "responseTime": "Tempo di risposta medio: 2 minuti",
+    "time15": "Tra 15 minuti",
+    "pickupPlaceholder": "Dove ti veniamo a prendere?",
+    "subtitle": "Servizio premium 24/7. Aeroporto, Porto e lunghe distanze. Prenotazioni istantanee via WhatsApp prioritario.",
+    "title": "Richiedi una corsa",
+    "titleHighlight": "Barcellona",
+    "bookingTitle": "Prenotazione Express",
+    "timeLater": "Programma per dopo",
+    "immediate": "Immediato",
+    "changeCity": "Cambia città",
+    "seeRates": "Vedi tariffe suggerite",
+    "selectDate": "Seleziona data",
+    "selectTime": "Ora di ritiro",
+    "selectTimePlaceholder": "Seleziona ora...",
+    "confirmSchedule": "Conferma Orario"
+  },
+  "footer": {
+    "contact": "Contatti",
+    "copyright": "Taxi Lux Ride",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookie",
+    "legalNotice": "Avviso Legale",
+    "location": "Spagna",
+    "legal": "Legale",
+    "email": "info@taxiluxride.com",
+    "description": "Servizio ufficiale di taxi premium. Licenze ufficiali e tariffe competitive."
+  },
+  "cookiesBanner": {
+    "message": "Utilizziamo cookie proprietari per ricordare la tua lingua e migliorare la tua esperienza.",
+    "accept": "Accetta",
+    "link": "Vedi Politica sui Cookie"
+  },
+  "services": {
+    "title": "Trasferimenti e Destinazioni",
+    "subtitle": "Esperti in trasferimenti turistici e logistica dei trasporti a Barcellona.",
+    "airport": {
+      "title": "Aeroporto di Barcellona (BCN)",
+      "desc": "Trasferimenti diretti da e per T1 e T2. Veicolo disponibile in 5 minuti.",
+      "tag": "Popolare"
+    },
+    "port": {
+      "title": "Porto Crociere",
+      "desc": "Ritiro ai moli e trasferimenti personalizzati per crocieristi.",
+      "tag": "Diretto"
+    },
+    "cityTour": {
+      "title": "Tour della Città",
+      "desc": "Scopri la Sagrada Familia, Park Güell e gli angoli più iconici in tutta comodità.",
+      "tag": "Turismo"
+    },
+    "business": {
+      "title": "Servizio Business",
+      "desc": "Trasporto puntuale e discreto per dirigenti ed eventi aziendali.",
+      "tag": "Premium"
+    },
+    "fira": {
+      "title": "Fira de Barcelona / Eventi",
+      "desc": "Trasferimenti esecutivi per Mobile World Congress (MWC) e fiere internazionali.",
+      "tag": "Affari"
+    },
+    "bookService": "Prenota Servizio"
+  },
+  "booking": {
+    "modal": {
+      "title": "Conferma Prenotazione",
+      "from": "Ritiro",
+      "to": "Destinazione",
+      "time": "Tempo stimato",
+      "price": "Prezzo approssimativo",
+      "guestInfo": "Completa i tuoi dati per continuare",
+      "name": "Nome",
+      "namePlaceholder": "Il tuo nome completo",
+      "nameRequired": "Il nome è obbligatorio",
+      "nameMin": "Minimo 2 caratteri",
+      "phone": "Telefono",
+      "phonePlaceholder": "612345678",
+      "phoneRequired": "Il telefono è obbligatorio",
+      "phoneInvalid": "Telefono non valido (es: 612345678)",
+      "bookWhatsApp": "Invia via WhatsApp",
+      "haveAccount": "Hai già un account? Accedi",
+      "loginComingSoon": "Accesso presto disponibile",
+      "backToGuest": "← Torna alla prenotazione ospite"
+    },
+    "form": {
+      "pickupLabel": "RITIRO",
+      "pickupPlaceholder": "Dove ti veniamo a prendere?",
+      "destinationLabel": "DESTINAZIONE",
+      "destinationPlaceholder": "Dove vai?",
+      "confirmRoute": "Conferma Percorso",
+      "useLocation": "Usa la mia posizione",
+      "estimatedTime": "Tempo stimato",
+      "distance": "Distanza",
+      "dateLabel": "Data",
+      "timeLabel": "Ora",
+      "passengersLabel": "Passeggeri",
+      "luggageLabel": "Valigie",
+      "transferTypeLabel": "Tipo di Tragitto",
+      "oneWay": "Solo Andata",
+      "roundTrip": "Andata e Ritorno",
+      "passenger": "Passeggero",
+      "passengers": "Passeggeri",
+      "suitcase": "Valigia",
+      "suitcases": "Valigie",
+      "whenLabel": "Quando?",
+      "now": "Adesso",
+      "schedule": "Programma",
+      "selectDate": "Seleziona...",
+      "selectTime": "Seleziona...",
+      "confirmDate": "Conferma Data"
+    }
+  }
+}

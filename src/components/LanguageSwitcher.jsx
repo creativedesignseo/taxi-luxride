@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 // Supported languages - must match main.jsx
-const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru'];
+const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru', 'it'];
 const DEFAULT_LANGUAGE = 'es';
 
 const LanguageSwitcher = () => {
@@ -25,6 +25,7 @@ const LanguageSwitcher = () => {
         { code: 'ar', name: 'العربية', flagCode: 'sa' },
         { code: 'hi', name: 'हिन्दी', flagCode: 'in' },
         { code: 'ru', name: 'Русский', flagCode: 'ru' },
+        { code: 'it', name: 'Italiano', flagCode: 'it' },
     ];
 
     // Use local flags stored in public/img/flags

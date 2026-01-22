@@ -43,7 +43,7 @@
     "babySeatMsg": "Hola, me gustaría reservar un taxi con silla para bebé (Maxicosi / Grupo 0+).",
     "petFriendlyMsg": "Hola, me gustaría reservar un taxi que acepte mascotas (Pet Friendly).",
     "pmrMsg": "Hola, me gustaría reservar un taxi adaptado PMR para silla de ruedas.",
-    "bigLuggage": "Taxi XL 7 personas y maletero",
+    "bigLuggage": "Taxi XL 7-8 Personas y gran maletero",
     "bigLuggageDesc": "Vehículos monovolumen ideales para grupos, familias y traslados con gran volumen de equipaje.",
     "bigLuggageMsg": "Hola, me gustaría reservar un taxi XL para 7 personas con maletero grande."
   },
@@ -139,7 +139,7 @@
     "subtitle": "Expertos en traslados turísticos y logística de transporte en Barcelona.",
     "airport": {
       "title": "Aeropuerto de Barcelona (BCN)",
-      "desc": "Traslados directos hacia y desde la T1 y T2. Monitoreo de vuelos e inmediatez.",
+      "desc": "Traslados directos hacia y desde la T1 y T2. Vehículo disponible en 5 minutos.",
       "tag": "Popular"
     },
     "port": {

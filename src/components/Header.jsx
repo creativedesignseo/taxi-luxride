@@ -39,6 +39,16 @@ const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 625 03 00
           >
             {t('nav.rates')}
           </button>
+          <a 
+            href="/tours"
+            className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:opacity-70 transition-opacity cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault();
+              window.location.assign('/tours'); 
+            }}
+          >
+            {t('nav.tours')}
+          </a>
           <button 
             onClick={() => onNavClick && onNavClick('nosotros')}
             className="text-[#1C1F23] font-normal text-base font-['Arimo',sans-serif] hover:opacity-70 transition-opacity"

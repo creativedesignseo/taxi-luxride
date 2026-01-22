@@ -14,10 +14,11 @@ import CookieConsent from './components/CookieConsent';
 import HomePage from './pages/HomePage';
 import { LegalNotice, PrivacyPolicy, CookiesPolicy } from './pages/LegalPages';
 import BookingPage from './pages/BookingPage';
-import ToursPage from './pages/ToursPage';
+import TourDetailPage from './pages/TourDetailPage';
+import ToursIndexPage from './pages/ToursIndexPage';
 
 // Supported languages
-const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru'];
+const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru', 'it'];
 
 const App = () => {
   const { t, i18n } = useTranslation();
@@ -83,7 +84,8 @@ const App = () => {
   const routeDefs = [
     { path: "", element: <HomePage /> },
     { path: "reservar", element: <BookingPage /> },
-    { path: "tours", element: <ToursPage /> },
+    { path: "tours", element: <ToursIndexPage /> },
+    { path: "tour/:id", element: <TourDetailPage /> },
     { 
       path: "aviso-legal", 
       element: (

@@ -12,6 +12,7 @@ import ja from './locales/ja.json';
 import ar from './locales/ar.json';
 import hi from './locales/hi.json';
 import ru from './locales/ru.json';
+import it from './locales/it.json';
 
 i18n
     .use(LanguageDetector) // Detects user language
@@ -27,7 +28,8 @@ i18n
             ja: { translation: ja },
             ar: { translation: ar },
             hi: { translation: hi },
-            ru: { translation: ru }
+            ru: { translation: ru },
+            it: { translation: it }
         },
         fallbackLng: 'es', // Default language is Spanish
         detection: {
