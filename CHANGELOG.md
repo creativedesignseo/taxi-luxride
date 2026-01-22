@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 
+## [1.11.0] - 2026-01-22
+
+### Added
+- **Image Optimization Toolkit**: Integrated `toolkits/image-optimizer` with `generate-assets.js` for automatic image optimization.
+- **Tours Integration**: Updated `toursData.js` to use optimized `hero` and `card` images.
+
+### Changed
+- **Footer Navigation**: 
+  - Fixed broken links and implemented scroll-to-section.
+  - Removed "Tours Urbanos" column.
+  - "Tarifas" and "Contacto" links now work correctly.
+- **Visuals**: Improved Tour Detail Hero visibility.
+
 ## [1.10.4] - 2026-01-21
 
 ### Changed
