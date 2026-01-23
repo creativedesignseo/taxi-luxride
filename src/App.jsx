@@ -146,6 +146,12 @@ const App = () => {
             {t('nav.services')}
           </button>
           <button 
+            onClick={() => { setMobileMenuOpen(false); navigate('/tours'); }}
+            className="text-2xl font-bold text-white border-b border-gray-800 pb-4"
+          >
+            {t('nav.tours')}
+          </button>
+          <button 
             onClick={() => { setMobileMenuOpen(false); handleNavClick('reservar'); }}
             className="text-2xl font-bold text-white border-b border-gray-800 pb-4"
           >

@@ -17,7 +17,7 @@ const ToursIndexPage = () => {
     }, []);
 
     return (
-        <div className="bg-slate-50 min-h-screen font-sans">
+        <div className="bg-slate-50 min-h-screen font-sans pt-[85px]">
             <Helmet>
                 <title>
                     {lang === 'es' ? 'Tours y Excursiones - Taxi Lux Ride' 
@@ -35,15 +35,16 @@ const ToursIndexPage = () => {
             </Helmet>
 
             {/* Header Section */}
-            <header className="bg-[#1C1F23] text-white py-16 md:py-24 relative overflow-hidden">
-                <div className="absolute inset-0 z-0 opacity-20">
+            <header className="bg-[#1C1F23] text-white py-20 md:py-28 relative overflow-hidden flex items-center justify-center">
+                <div className="absolute inset-0 z-0 opacity-40">
                      <img 
                         src="/img/Sagrada-familia-02.webp" 
                         alt="Background" 
                         className="w-full h-full object-cover"
                     />
+                     <div className="absolute inset-0 bg-black/60" />
                 </div>
-                <div className="container mx-auto px-4 relative z-10 text-center">
+                <div className="container mx-auto px-4 relative z-10 text-center flex flex-col items-center justify-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4">
                         {lang === 'es' ? 'Experiencias Inolvidables' : lang === 'it' ? 'Esperienze Indimenticabili' : 'Unforgettable Experiences'}
                     </h1>
