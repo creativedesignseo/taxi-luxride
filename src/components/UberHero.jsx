@@ -80,11 +80,11 @@ const UberHero = ({ onBooking }) => {
              // setOrigin(feature.place_name); 
              // setOriginCoords([longitude, latitude]);
           } else {
-             setLocationLabel('España, ES');
+             setLocationLabel('Barcelona, España');
           }
        } catch (error) {
           console.log("Loc error", error);
-          setLocationLabel('España, ES'); // Fallback
+          setLocationLabel('Barcelona, España'); // Fallback
        }
     };
     initLocation();

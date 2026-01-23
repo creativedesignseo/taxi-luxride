@@ -1,20 +1,25 @@
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { MapPin, Zap, Users, CreditCard, Clock, Star } from 'lucide-react';
 
 const ServicesSection = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+  
   const services = [
     {
       icon: <MapPin size={28} />,
       title: t('services.cityTour.title'),
       description: t('services.cityTour.desc'),
-      tag: t('services.cityTour.tag')
+      tag: t('services.cityTour.tag'),
+      link: '/tours'
     },
     {
-      icon: <img src="/img/suitcases.svg" alt="Equipaje" className="w-7 h-7" />,
+      icon: <img src="/img/optimized/aeroport-de-barcelona-card.webp" alt="Taxi Aeropuerto" className="w-full h-full object-cover rounded-lg" />,
       title: t('services.airport.title'),
       description: t('services.airport.desc'),
-      tag: t('services.airport.tag')
+      tag: t('services.airport.tag'),
+      link: '/taxi-aeropuerto-barcelona'
     },
     {
       icon: <Users size={28} />,
@@ -29,10 +34,10 @@ const ServicesSection = () => {
       tag: t('services.business.tag')
     },
     {
-      icon: <Clock size={28} />,
-      title: t('hero.badge'),
-      description: t('hero.subtitle'),
-      tag: t('hero.immediate')
+      icon: <img src="https://api.iconify.design/noto:passenger-ship.svg" className="w-7 h-7" alt="Cruise" />,
+      title: t('rates.port'),
+      description: t('services.port.desc'),
+      tag: t('services.port.tag')
     },
     {
       icon: <Star size={28} />,
@@ -61,7 +66,10 @@ const ServicesSection = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white border border-black/[0.03] rounded-2xl p-6 hover:shadow-xl hover:shadow-black/[0.03] hover:border-[#FFDB3A]/30 transition-all cursor-pointer group"
+              onClick={() => service.link ? navigate(service.link) : null}
+              className={`bg-white border border-black/[0.03] rounded-2xl p-6 transition-all group relative overflow-hidden
+                ${service.link ? 'cursor-pointer hover:shadow-xl hover:shadow-black/[0.03] hover:border-[#FFDB3A]/30 hover:-translate-y-1' : 'cursor-default'}
+              `}
             >
               <div className="w-14 h-14 bg-[rgba(3,2,19,0.05)] rounded-xl flex items-center justify-center text-[#1C1F23] group-hover:bg-gray-200 transition-colors">
                 {service.icon}
@@ -70,7 +78,10 @@ const ServicesSection = () => {
                 <div className="flex items-center gap-3 mb-2">
                   <span className="text-xs font-medium text-[rgba(3,2,19,0.5)] bg-[rgba(3,2,19,0.05)] px-2 py-1 rounded font-['Arimo',sans-serif]">{service.tag}</span>
                 </div>
-                <h3 className="text-xl font-bold text-[#1C1F23] font-['Arimo',sans-serif]">{service.title}</h3>
+                <h3 className="text-xl font-bold text-[#1C1F23] font-['Arimo',sans-serif] flex items-center gap-2">
+                  {service.title}
+                  {service.link && <span className="text-xs text-[#FFDB3A] opacity-0 group-hover:opacity-100 transition-opacity">↗</span>}
+                </h3>
                 <p className="text-[rgba(3,2,19,0.7)] mt-2 font-['Arimo',sans-serif]">{service.description}</p>
               </div>
             </div>

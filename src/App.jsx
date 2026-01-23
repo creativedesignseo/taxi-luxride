@@ -16,6 +16,7 @@ import { LegalNotice, PrivacyPolicy, CookiesPolicy } from './pages/LegalPages';
 import BookingPage from './pages/BookingPage';
 import TourDetailPage from './pages/TourDetailPage';
 import ToursIndexPage from './pages/ToursIndexPage';
+import TaxiAirportPage from './pages/TaxiAirportPage';
 
 // Supported languages
 const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru', 'it'];
@@ -85,6 +86,7 @@ const App = () => {
     { path: "", element: <HomePage /> },
     { path: "reservar", element: <BookingPage /> },
     { path: "tours", element: <ToursIndexPage /> },
+    { path: "taxi-aeropuerto-barcelona", element: <TaxiAirportPage /> },
     { path: "tour/:id", element: <TourDetailPage /> },
     { 
       path: "aviso-legal", 
