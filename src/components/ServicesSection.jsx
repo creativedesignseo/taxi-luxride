@@ -59,10 +59,10 @@ const ServicesSection = () => {
   };
 
   return (
-    <section id="servicios" className="py-12 md:py-20 bg-[#F9FAFB]">
+    <section id="servicios" className="py-6 md:py-20 bg-[#F9FAFB]">
       <div className="container mx-auto px-6 md:px-8 lg:px-16">
         {/* Header */}
-        <div className="text-center mb-12 md:mb-16">
+        <div className="text-center mb-6 md:mb-16">
           <span className="text-sm font-medium text-[rgba(3,2,19,0.5)] uppercase tracking-wider font-['Arimo',sans-serif]">{t('nav.services')}</span>
           <h2 className="text-[32px] md:text-[48px] font-bold text-[#1C1F23] mt-2 md:mt-4 leading-tight font-['Inter',sans-serif]">
             {t('services.title')}

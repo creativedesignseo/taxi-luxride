@@ -92,7 +92,7 @@ const LanguageSwitcher = () => {
             {/* Large Round SVG Flag Button */}
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden bg-white/10 hover:bg-white/20 border-2 border-white/30 hover:border-white/50 transition-all duration-200 focus:outline-none shadow-lg hover:shadow-xl hover:scale-110 active:scale-95"
+                className="flex items-center justify-center w-10 h-10 rounded-full overflow-hidden transition-all duration-200 focus:outline-none active:scale-95"
                 aria-label="Change language"
             >
                 <img 

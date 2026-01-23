@@ -15,17 +15,17 @@ const ToursSection = () => {
   const highlightTours = highlightToursIds.map(id => toursData[id]).filter(Boolean);
 
   return (
-    <section id="tours" className="py-20 bg-white">
+    <section id="tours" className="py-8 md:py-20 bg-white">
       <div className="container mx-auto px-8 lg:px-16">
-        <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+        <div className="flex flex-col md:flex-row items-end justify-between mb-6 md:mb-12 gap-6">
           <div className="max-w-xl">
              <span className="text-sm font-medium text-[rgba(3,2,19,0.5)] uppercase tracking-wider font-['Arimo',sans-serif]">
                 {lang === 'es' ? 'Descubre Cataluña' : lang === 'it' ? 'Scopri la Catalogna' : 'Discover Catalonia'}
              </span>
-            <h2 className="text-[48px] font-bold text-[#1C1F23] mt-4 leading-tight font-['Inter',sans-serif]">
+            <h2 className="text-3xl md:text-[48px] font-bold text-[#1C1F23] mt-2 md:mt-4 leading-tight font-['Inter',sans-serif]">
                {lang === 'es' ? 'Tours Exclusivos' : lang === 'it' ? 'Tour Esclusivi' : 'Exclusive Tours'}
             </h2>
-            <p className="text-lg text-[rgba(3,2,19,0.7)] mt-4 font-['Arimo',sans-serif]">
+            <p className="text-base md:text-lg text-[rgba(3,2,19,0.7)] mt-2 md:mt-4 font-['Arimo',sans-serif]">
                {lang === 'es' 
                 ? 'Conoce los lugares más emblemáticos con nuestros conductores expertos. Servicio personalizado.'
                 : lang === 'it'

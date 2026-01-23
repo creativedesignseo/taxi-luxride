@@ -35,7 +35,7 @@ const ToursIndexPage = () => {
             </Helmet>
 
             {/* Header Section */}
-            <header className="bg-[#1C1F23] text-white py-20 md:py-28 relative overflow-hidden flex items-center justify-center">
+            <header className="bg-[#1C1F23] text-white py-12 md:py-28 relative overflow-hidden flex items-center justify-center">
                 <div className="absolute inset-0 z-0 opacity-40">
                      <img 
                         src="/img/Sagrada-familia-02.webp" 
@@ -45,8 +45,8 @@ const ToursIndexPage = () => {
                      <div className="absolute inset-0 bg-black/60" />
                 </div>
                 <div className="container mx-auto px-4 relative z-10 text-center flex flex-col items-center justify-center">
-                    <h1 className="text-4xl md:text-5xl font-bold mb-4">
-                        {lang === 'es' ? 'Experiencias Inolvidables' : lang === 'it' ? 'Esperienze Indimenticabili' : 'Unforgettable Experiences'}
+                    <h1 className="text-4xl md:text-5xl font-bold mb-4 capitalize">
+                        {lang === 'es' ? 'Tour Barcelona y Cataluña' : lang === 'it' ? 'Tour Barcellona e Catalogna' : 'Barcelona & Catalonia Tours'}
                     </h1>
                     <p className="text-xl text-gray-300 max-w-2xl mx-auto">
                         {lang === 'es' ? 'Viaja con comodidad y estilo a los destinos más emblemáticos de Cataluña.'
@@ -57,7 +57,7 @@ const ToursIndexPage = () => {
             </header>
 
             {/* Tours Grid */}
-            <div className="container mx-auto px-4 py-16">
+            <div className="container mx-auto px-4 py-8 md:py-16">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {Object.values(toursData).map((tour) => (
                         <div key={tour.id} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col h-full group">
