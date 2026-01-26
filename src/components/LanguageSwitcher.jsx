@@ -17,15 +17,15 @@ const LanguageSwitcher = () => {
     const languages = [
         { code: 'es', name: 'Español', flagCode: 'es' },
         { code: 'en', name: 'English', flagCode: 'gb' },
-        { code: 'de', name: 'Deutsch', flagCode: 'de' },
+        { code: 'it', name: 'Italiano', flagCode: 'it' },
         { code: 'fr', name: 'Français', flagCode: 'fr' },
+        { code: 'de', name: 'Deutsch', flagCode: 'de' },
         { code: 'pt', name: 'Português', flagCode: 'pt' },
         { code: 'zh', name: '中文', flagCode: 'cn' },
         { code: 'ja', name: '日本語', flagCode: 'jp' },
         { code: 'ar', name: 'العربية', flagCode: 'sa' },
         { code: 'hi', name: 'हिन्दी', flagCode: 'in' },
         { code: 'ru', name: 'Русский', flagCode: 'ru' },
-        { code: 'it', name: 'Italiano', flagCode: 'it' },
     ];
 
     // Use local flags stored in public/img/flags

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate } from 'react-router-dom';
-import { ArrowLeft, Phone, Clock, Users, MapPin, Check, Calendar, Plane } from 'lucide-react';
+import { ArrowLeft, Phone, Clock, Users, MapPin, Check, Calendar, Plane, ArrowRight } from 'lucide-react';
 
 const TaxiAirportPage = () => {
     const { i18n } = useTranslation();
@@ -65,13 +65,13 @@ const TaxiAirportPage = () => {
             { icon: <Check />, text: { es: "Pago con Tarjeta / Efectivo", en: "Card / Cash Payment", it: "Pagamento con Carta / Contanti" } }
         ],
         pricing: {
-            title: { es: "Tarifas Aproximadas", en: "Approximate Rates", it: "Tariffe Approssimative" },
+            title: { es: "Destinos Frecuentes", en: "Frequent Destinations", it: "Destinazioni Frequenti" },
             items: [
-                { route: "Aeropuerto ↔ Barcelona Centro", price: "35€ - 40€" },
-                { route: "Aeropuerto ↔ Puerto Cruceros", price: "40€ - 45€" },
-                { route: "Aeropuerto ↔ Fira Gran Via", price: "25€ - 30€" }
-            ],
-            note: { es: "* Precios orientativos según taxímetro. Iva incluido.", en: "* Approximate prices based on taximeter. VAT included.", it: "* Prezzi indicativi basati sul tassametro. IVA inclusa." }
+                { route: "Aeropuerto ↔ Barcelona Centro" },
+                { route: "Aeropuerto ↔ Puerto Cruceros" },
+                { route: "Aeropuerto ↔ Fira Gran Via" },
+                { route: "Aeropuerto ↔ Toda España" }
+            ]
         }
     };
 
@@ -209,20 +209,18 @@ const TaxiAirportPage = () => {
                         {/* Pricing Box */}
                         <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
                             <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                <Clock className="text-black" />
+                                <MapPin className="text-black" />
                                 {content.pricing.title[lang] || content.pricing.title.es}
                             </h3>
                             <div className="space-y-4">
                                 {content.pricing.items.map((item, i) => (
                                     <div key={i} className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
                                         <span className="font-medium text-slate-700">{item.route}</span>
-                                        <span className="font-bold text-white bg-black px-3 py-1 rounded-full">{item.price}</span>
+                                        <ArrowRight size={16} className="text-gray-400" />
                                     </div>
                                 ))}
                             </div>
-                            <p className="mt-6 text-xs text-gray-500 text-center">
-                                {content.pricing.note[lang] || content.pricing.note.es}
-                            </p>
+
                             <button 
                                 onClick={handleWhatsApp}
                                 className="w-full mt-6 bg-black text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition-colors"
