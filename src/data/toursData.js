@@ -152,5 +152,35 @@ export const toursData = {
       { time: '12:00', desc: { es: 'Tarragona Romana', en: 'Roman Tarragona', it: 'Tarragona Romana' } },
       { time: '17:00', desc: { es: 'Regreso', en: 'Return', it: 'Ritorno' } }
     ]
+  },
+  'gaudi-tour': {
+    id: 'gaudi-tour',
+    title: {
+      es: "Tour Arquitectura",
+      en: "Architecture Tour",
+      it: "Tour Architettura"
+    },
+    highlight: "Gaudí Completo",
+    badge: {
+      es: "Arte e Historia",
+      en: "Art & History",
+      it: "Arte e Storia"
+    },
+    description: {
+      es: "Ruta exclusiva por las obras maestras de Antoni Gaudí: Sagrada Familia, Casa Batlló y Park Güell. Una inmersión total en el modernismo catalán.",
+      en: "Exclusive route through Antoni Gaudí's masterpieces: Sagrada Familia, Casa Batlló, and Park Güell. A total immersion in Catalan modernism.",
+      it: "Percorso esclusivo attraverso i capolavori di Antoni Gaudí: Sagrada Familia, Casa Batlló e Park Güell. Un'immersione totale nel modernismo catalano."
+    },
+    duration: "4-5 horas",
+    capacity: "Max 7-8 pax",
+    distance: "Tour Urbano",
+    price: null,
+    image: "/img/Sagrada-familia-02.webp",
+    cardImage: "/img/Sagrada-familia-02.webp",
+    itinerary: [
+      { time: '09:00', desc: { es: 'Sagrada Familia', en: 'Sagrada Familia', it: 'Sagrada Familia' } },
+      { time: '11:00', desc: { es: 'Park Güell', en: 'Park Güell', it: 'Park Güell' } },
+      { time: '13:00', desc: { es: 'Casa Batlló / La Pedrera', en: 'Casa Batlló / La Pedrera', it: 'Casa Batlló / La Pedrera' } }
+    ]
   }
 };

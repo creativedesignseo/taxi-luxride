@@ -12,11 +12,16 @@ import CookieConsent from './components/CookieConsent';
 
 // Pages
 import HomePage from './pages/HomePage';
-import { LegalNotice, PrivacyPolicy, CookiesPolicy } from './pages/LegalPages';
 import BookingPage from './pages/BookingPage';
-import TourDetailPage from './pages/TourDetailPage';
-import ToursIndexPage from './pages/ToursIndexPage';
 import TaxiAirportPage from './pages/TaxiAirportPage';
+import ServicesPage from './pages/ServicesPage';
+import ToursPage from './pages/ToursPage';
+import TourDetailPage from './pages/TourDetailPage';
+import BusinessPage from './pages/BusinessPage';
+import TaxiXLPage from './pages/TaxiXLPage';
+import CruisePortPage from './pages/CruisePortPage';
+import PMRPage from './pages/PMRPage';
+import { PrivacyPolicy, LegalNotice, CookiesPolicy } from './pages/LegalPages';
 
 // Supported languages
 const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru', 'it'];
@@ -85,8 +90,13 @@ const App = () => {
   const routeDefs = [
     { path: "", element: <HomePage /> },
     { path: "reservar", element: <BookingPage /> },
-    { path: "tours", element: <ToursIndexPage /> },
+    { path: "tours", element: <ToursPage /> },
     { path: "taxi-aeropuerto-barcelona", element: <TaxiAirportPage /> },
+    { path: "servicio-business", element: <BusinessPage /> },
+    { path: "taxi-xl", element: <TaxiXLPage /> },
+    { path: "puerto-cruceros", element: <CruisePortPage /> },
+    { path: "pmr", element: <PMRPage /> },
+    { path: "servicios", element: <ServicesPage /> },
     { path: "tour/:id", element: <TourDetailPage /> },
     { 
       path: "aviso-legal", 

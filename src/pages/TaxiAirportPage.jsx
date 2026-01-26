@@ -102,7 +102,7 @@ const TaxiAirportPage = () => {
                     />
                 </div>
 
-                <div className="relative z-20 container mx-auto px-6 md:px-16 py-[50px] pt-24 md:pt-[50px] pb-32 md:pb-[50px]">
+                <div className="relative z-20 container mx-auto px-6 md:px-16 py-12">
                     <div className="flex flex-col gap-6 max-w-3xl">
                         <button 
                             onClick={() => navigate('/')}
@@ -206,33 +206,60 @@ const TaxiAirportPage = () => {
                             </div>
                         </div>
 
-                        {/* Pricing Box */}
-                        <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
-                            <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
-                                <MapPin className="text-black" />
-                                {content.pricing.title[lang] || content.pricing.title.es}
-                            </h3>
-                            <div className="space-y-4">
-                                {content.pricing.items.map((item, i) => (
-                                    <div key={i} className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                                        <span className="font-medium text-slate-700">{item.route}</span>
-                                        <ArrowRight size={16} className="text-gray-400" />
-                                    </div>
-                                ))}
-                            </div>
-
-                            <button 
-                                onClick={handleWhatsApp}
-                                className="w-full mt-6 bg-black text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition-colors"
-                            >
-                                {lang === 'es' ? 'Solicitar Presupuesto' : 'Request Quote'}
-                            </button>
+                {/* ===== PRICING REMOVED & NEW DESTINATIONS ADDED ===== */}
+                <div className="bg-slate-50 p-8 rounded-3xl border border-slate-100">
+                    <h3 className="text-xl font-bold mb-6 flex items-center gap-2">
+                        <MapPin className="text-black" />
+                        {lang === 'es' ? 'Destinos Frecuentes' : lang === 'it' ? 'Destinazioni Frequenti' : 'Frequent Destinations'}
+                    </h3>
+                    
+                    <div className="space-y-4">
+                         <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <span className="font-medium text-slate-700">Aeropuerto ↔ Barcelona Centro</span>
+                            <ArrowRight size={16} className="text-gray-400" />
+                        </div>
+                         <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <span className="font-medium text-slate-700">Aeropuerto ↔ Puerto Cruceros</span>
+                            <ArrowRight size={16} className="text-gray-400" />
+                        </div>
+                         <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <span className="font-medium text-slate-700">Aeropuerto ↔ Sitges / Costa Brava</span>
+                            <ArrowRight size={16} className="text-gray-400" />
                         </div>
                     </div>
+
+                    <div className="mt-8 pt-8 border-t border-gray-200">
+                        <h4 className="font-bold text-lg mb-3 flex items-center gap-2 text-[#1C1F23]">
+                            <Plane className="text-[#FFDB3A]" size={20} />
+                            {lang === 'es' ? 'Larga Distancia' : lang === 'it' ? 'Lunga Distanza' : 'Long Distance'}
+                        </h4>
+                        <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                             {lang === 'es' 
+                              ? 'Servicio directo desde el Aeropuerto a cualquier punto de España y Andorra la Vella.'
+                              : lang === 'it'
+                              ? 'Servizio diretto dall\'Aeroporto a qualsiasi punto della Spagna e Andorra la Vella.'
+                              : 'Direct service from the Airport to any point in Spain and Andorra la Vella.'}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-xs font-semibold text-gray-600">Andorra</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-xs font-semibold text-gray-600">Girona</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-xs font-semibold text-gray-600">Tarragona</span>
+                            <span className="px-3 py-1 bg-white border border-gray-200 rounded-lg text-xs font-semibold text-gray-600">Francia (Sur)</span>
+                        </div>
+                    </div>
+
+                    <button 
+                        onClick={handleWhatsApp}
+                        className="w-full mt-6 bg-black text-white font-bold py-4 rounded-xl hover:bg-slate-800 transition-colors shadow-lg"
+                    >
+                        {lang === 'es' ? 'Consultar Tarifa' : lang === 'it' ? 'Richiedi Tariffa' : 'Check Rates'}
+                    </button>
                 </div>
-            </section>
+            </div>
         </div>
-    );
+    </section>
+</div>
+);
 };
 
 export default TaxiAirportPage;

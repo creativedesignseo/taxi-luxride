@@ -9,11 +9,11 @@ const ServicesSection = () => {
   
   const services = [
     {
-      image: "/img/Sagrada-familia-02.webp",
+      image: "/img/tours-por-la-ciudad.webp",
       title: t('services.cityTour.title'),
       description: t('services.cityTour.desc'),
       tag: t('services.cityTour.tag'),
-      link: '/tours'
+      link: '/tour/gaudi-tour'
     },
     {
       image: "/img/optimized/aeroport-de-barcelona-card.webp",
@@ -26,25 +26,29 @@ const ServicesSection = () => {
       image: "/img/coches con maletero grandes.webp",
       title: t('rates.bigLuggage'),
       description: t('rates.bigLuggageDesc'),
-      tag: t('booking.form.passengersLabel')
+      tag: t('booking.form.passengersLabel'),
+      link: '/taxi-xl'
     },
     {
-      image: "/img/Hombre_Ejecutivo_en_taxi.webp",
+      image: "/img/Coche de lujo.png",
       title: t('services.business.title'),
       description: t('services.business.desc'),
-      tag: t('services.business.tag')
+      tag: t('services.business.tag'),
+      link: '/servicio-business'
     },
     {
       image: "/img/Puerto-2.webp",
       title: t('rates.port'),
       description: t('services.port.desc'),
-      tag: t('services.port.tag')
+      tag: t('services.port.tag'),
+      link: '/puerto-cruceros'
     },
     {
       image: "/img/Persona con movilidad reducida (PMR).webp",
-      title: t('services.business.tag'),
+      title: t('rates.pmr'),
       description: t('rates.pmrDesc'),
-      tag: t('rates.pmr')
+      tag: t('rates.pmr'),
+      link: '/pmr'
     }
   ];
 
