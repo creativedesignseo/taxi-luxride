@@ -71,6 +71,30 @@ async function processSingleFile(filename) {
       imageBuffer = inputPath;
     }
 
+    // --- ANÁLISIS DE BRILLO DINÁMICO ---
+    const stats = await sharp(imageBuffer).stats();
+    // Calculamos la luminancia media (brillo percibido)
+    // Usamos la fórmula estándar de luminancia: 0.2126*R + 0.7152*G + 0.0722*B
+    const r = stats.channels[0].mean;
+    const g = stats.channels[1].mean;
+    const b = stats.channels[2].mean;
+    const luminance = (0.2126 * r) + (0.7152 * g) + (0.0722 * b);
+    
+    let dynamicBrightness = 1.05; // Base (vibrante)
+    let dynamicSaturation = 1.1;  // Base
+
+    if (luminance < 100) {
+      // Imagen oscura: subimos más el brillo
+      dynamicBrightness = 1.20;
+      console.log(`   💡 Detección: Imagen oscura (Luminancia: ${Math.round(luminance)}). Aplicando corrección de brillo +20%.`);
+    } else if (luminance > 180) {
+      // Imagen muy clara: bajamos ligeramente el brillo para no quemarla
+      dynamicBrightness = 0.95;
+      console.log(`   🕶️ Detección: Imagen muy clara (Luminancia: ${Math.round(luminance)}). Ajustando exposición -5%.`);
+    } else {
+      console.log(`   ✨ Detección: Brillo equilibrado (Luminancia: ${Math.round(luminance)}). Aplicando optimización estándar.`);
+    }
+
     for (const [profileName, config] of Object.entries(PERFILES)) {
       const outputFilename = `${name}-${profileName}.webp`;
       const outputPath = join(OUTPUT_DIR, outputFilename);
@@ -85,8 +109,8 @@ async function processSingleFile(filename) {
             position: config.position
         })
         .modulate({
-            brightness: 1.05, // Aumenta ligeramente el brillo
-            saturation: 1.1   // Mejora la claridad de los colores
+            brightness: dynamicBrightness,
+            saturation: dynamicSaturation
         })
         .sharpen() // Añade nitidez
         .webp({ quality: config.quality })
