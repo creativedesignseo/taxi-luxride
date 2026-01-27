@@ -32,7 +32,7 @@ const HomePage = () => {
   };
 
   const handleCall = () => {
-    window.location.href = "tel:+34631806648";
+    window.location.href = "tel:+34631806645";
   };
 
   return (

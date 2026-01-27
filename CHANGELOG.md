@@ -1,6 +1,11 @@
 # Changelog
 
-## [Unreleased]
+## [2026-01-27]
+### Corregido
+- **Rutas**: Solucionada la importación faltante de `TaxiXLPage` en `App.jsx` que causaba un error en la navegación.
+- **Consistencia de Datos**: Unificación del número de teléfono oficial (+34 631 80 66 45) en todos los componentes y páginas.
+- **Header & Footer**: Actualización de props por defecto y etiquetas de visualización de contacto.
+- **HomePage**: Corregido número de teléfono hardcodeado en las acciones de reserva.
 
 ## [2026-01-26]
 ### Añadido

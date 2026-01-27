@@ -18,8 +18,8 @@ import ServicesPage from './pages/ServicesPage';
 import ToursPage from './pages/ToursPage';
 import TourDetailPage from './pages/TourDetailPage';
 import BusinessPage from './pages/BusinessPage';
-import TaxiXLPage from './pages/TaxiXLPage';
 import CruisePortPage from './pages/CruisePortPage';
+import TaxiXLPage from './pages/TaxiXLPage';
 import PMRPage from './pages/PMRPage';
 import { PrivacyPolicy, LegalNotice, CookiesPolicy } from './pages/LegalPages';
 
@@ -34,7 +34,7 @@ const App = () => {
 
   // Phone configuration
   const PHONE_NUMBER = "+34631806645";
-  const PHONE_DISPLAY = "+34 625 03 00 00";
+  const PHONE_DISPLAY = "+34 631 80 66 45";
 
   // Scroll to top on route change
   useEffect(() => {

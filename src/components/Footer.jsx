@@ -2,7 +2,7 @@ import { useNavigate, Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
-const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
+const Footer = ({ phoneDisplay = "+34 631 80 66 45" }) => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
@@ -119,7 +119,7 @@ const Footer = ({ phoneDisplay = "+34 625 030 000" }) => {
                 <Phone size={16} className="text-[#FFDB3A] mt-1 shrink-0" />
                 <div>
                   <a href="tel:+34631806645" className="text-white/70 text-sm font-['Arimo',sans-serif] hover:text-white transition-colors block">
-                    {t('phone_display')}
+                    +34 631 80 66 45
                   </a>
                   <span className="text-white/40 text-xs">24h disponible</span>
                 </div>
