@@ -11,7 +11,7 @@ const ToursSection = () => {
   const lang = ['es', 'en', 'it'].includes(currentLang) ? currentLang : 'es';
 
   // Select 4 highlight tours to show on home
-  const highlightToursIds = ['montserrat', 'portaventura', 'dali-museum', 'costa-brava'];
+  const highlightToursIds = ['gaudi-tour', 'montserrat', 'portaventura', 'dali-museum'];
   const highlightTours = highlightToursIds.map(id => toursData[id]).filter(Boolean);
 
   return (

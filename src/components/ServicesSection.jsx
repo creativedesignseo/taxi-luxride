@@ -9,14 +9,7 @@ const ServicesSection = () => {
   
   const services = [
     {
-      image: "/img/tours-por-la-ciudad.webp",
-      title: t('services.cityTour.title'),
-      description: t('services.cityTour.desc'),
-      tag: t('services.cityTour.tag'),
-      link: '/tour/gaudi-tour'
-    },
-    {
-      image: "/img/optimized/aeroport-de-barcelona-card.webp",
+      image: "/img/optimized/taxi-areopuerto-card.webp",
       title: t('services.airport.title'),
       description: t('services.airport.desc'),
       tag: t('services.airport.tag'),

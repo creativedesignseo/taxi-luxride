@@ -10,7 +10,12 @@
 ### Añadido
 - **Optimizador de Imágenes**: Nuevo script en `scripts/generate-assets.js` con soporte para formatos JPG, PNG, WebP, AVIF y ahora **HEIC**.
 - **Perfiles de Imagen**: Automatización de generación de versiones `hero`, `card`, `mobile` y `thumb`.
-- **Nuevos Assets**: Actualización de imágenes del servicio PMR con versiones optimizadas.
+- **Nuevos Assets**: Actualización de imágenes del servicio PMR y Taxi Aeropuerto con versiones optimizadas.
+
+### Diseño y UX
+- **Reordenación de Servicios**: El servicio de Taxi Aeropuerto ahora aparece en primera posición para mayor visibilidad.
+- **Sección de Tours**: Traslado del "Tour por la ciudad" desde la sección de servicios generales a la sección de "Tours Exclusivos" como tour destacado.
+- **Actualización Visual**: Nuevos fondos y tarjetas para el servicio de Aeropuerto.
 
 ## [2026-01-26]
 ### Añadido

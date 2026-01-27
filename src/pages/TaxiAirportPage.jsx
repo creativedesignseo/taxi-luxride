@@ -94,7 +94,7 @@ const TaxiAirportPage = () => {
                         }}
                     />
                     <img 
-                        src="/img/optimized/aeroport-de-barcelona-hero.webp" 
+                        src="/img/optimized/taxi-areopuerto-hero.webp" 
                         alt="Taxi Aeropuerto Barcelona" 
                         className="absolute inset-0 w-full h-full object-cover"
                         // Fallback image if specific airport image is missing, assuming standard hero background exists
