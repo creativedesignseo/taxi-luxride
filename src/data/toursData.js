@@ -21,8 +21,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "60 km",
     price: null, // Consultar precio
-    image: "/img/optimized/Barcelona Montserrat-hero.webp",
-    cardImage: "/img/optimized/Barcelona Montserrat-card.webp",
+    image: "/img/optimized/Barcelona Montserrat-3-hero.webp",
+    cardImage: "/img/optimized/Barcelona Montserrat-3-card.webp",
     itinerary: [
       { time: '09:00', desc: { es: 'Recogida en Barcelona', en: 'Pickup in Barcelona', it: 'Ritiro a Barcellona' } },
       { time: '10:00', desc: { es: 'Llegada a Montserrat', en: 'Arrival at Montserrat', it: 'Arrivo a Montserrat' } },
