@@ -15,10 +15,10 @@ const OUTPUT_DIR = join(__dirname, '../public/img/optimized');
 
 // --- CONFIGURACIÓN DE PERFILES ---
 const PERFILES = {
-  'card': { width: 334, height: 250, fit: 'cover', position: 'attention', quality: 85 },
-  'hero': { width: 1920, height: 800, fit: 'cover', position: 'center', quality: 80 },
-  'thumb': { width: 150, height: 150, fit: 'cover', position: 'center', quality: 80 },
-  'mobile': { width: 600, height: 800, fit: 'cover', position: 'attention', quality: 80 }
+  'card': { width: 334, height: 250, fit: 'cover', position: 'center', quality: 90 },
+  'hero': { width: 1920, height: 800, fit: 'cover', position: 'center', quality: 85 },
+  'thumb': { width: 150, height: 150, fit: 'cover', position: 'center', quality: 85 },
+  'mobile': { width: 600, height: 800, fit: 'cover', position: 'center', quality: 85 }
 };
 
 // --- UTILS ---
@@ -82,8 +82,13 @@ async function processSingleFile(filename) {
             width: config.width,
             height: config.height,
             fit: config.fit,
-            position: config.position === 'attention' ? sharp.strategy.attention : config.position
+            position: config.position
         })
+        .modulate({
+            brightness: 1.05, // Aumenta ligeramente el brillo
+            saturation: 1.1   // Mejora la claridad de los colores
+        })
+        .sharpen() // Añade nitidez
         .webp({ quality: config.quality })
         .toFile(outputPath);
     }

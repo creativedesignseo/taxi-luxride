@@ -175,8 +175,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "Tour Urbano",
     price: null,
-    image: "/img/Sagrada-familia-02.webp",
-    cardImage: "/img/Sagrada-familia-02.webp",
+    image: "/img/optimized/Gaudí-Completo-hero.webp",
+    cardImage: "/img/optimized/Gaudí-Completo-card.webp",
     itinerary: [
       { time: '09:00', desc: { es: 'Sagrada Familia', en: 'Sagrada Familia', it: 'Sagrada Familia' } },
       { time: '11:00', desc: { es: 'Park Güell', en: 'Park Güell', it: 'Park Güell' } },
