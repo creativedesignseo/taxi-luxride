@@ -10,7 +10,8 @@
 ### Añadido
 - **Optimizador de Imágenes**: Nuevo script en `scripts/generate-assets.js` con soporte para formatos JPG, PNG, WebP, AVIF y ahora **HEIC**.
 - **Perfiles de Imagen**: Automatización de generación de versiones `hero`, `card`, `mobile` y `thumb`.
-- **Nuevos Assets**: Actualización de imágenes del servicio PMR y Taxi Aeropuerto con versiones optimizadas.
+- **Nuevos Assets**: Actualización de imágenes del servicio PMR, Taxi Aeropuerto y Tour Gaudí (v2) con versiones optimizadas.
+- **Mejora de Algoritmo de Imagen**: Implementación de centrado absoluto, ajuste de brillo/saturación y filtro de nitidez (sharpening) en el post-procesamiento.
 
 ### Diseño y UX
 - **Reordenación de Servicios**: El servicio de Taxi Aeropuerto ahora aparece en primera posición para mayor visibilidad.
