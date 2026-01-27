@@ -175,7 +175,7 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "Tour Urbano",
     price: null,
-    image: "/img/optimized/sagrada-familia-1-hero.webp",
+    image: "/img/optimized/sagrada-familia-2-hero.webp",
     cardImage: "/img/optimized/sagrada-familia-2-card.webp",
     itinerary: [
       { time: '09:00', desc: { es: 'Sagrada Familia', en: 'Sagrada Familia', it: 'Sagrada Familia' } },
