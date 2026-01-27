@@ -7,6 +7,11 @@
 - **Header & Footer**: Actualización de props por defecto y etiquetas de visualización de contacto.
 - **HomePage**: Corregido número de teléfono hardcodeado en las acciones de reserva.
 
+### Añadido
+- **Optimizador de Imágenes**: Nuevo script en `scripts/generate-assets.js` con soporte para formatos JPG, PNG, WebP, AVIF y ahora **HEIC**.
+- **Perfiles de Imagen**: Automatización de generación de versiones `hero`, `card`, `mobile` y `thumb`.
+- **Nuevos Assets**: Actualización de imágenes del servicio PMR con versiones optimizadas.
+
 ## [2026-01-26]
 ### Añadido
 - **Nuevas Páginas de Servicios**: Implementadas páginas dedicadas para `TaxiAirportPage`, `TaxiXLPage`, `BusinessPage`, `CruisePortPage` y `PMRPage` con diseño estandarizado.

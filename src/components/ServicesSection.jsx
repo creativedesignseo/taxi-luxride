@@ -44,7 +44,7 @@ const ServicesSection = () => {
       link: '/puerto-cruceros'
     },
     {
-      image: "/img/Persona con movilidad reducida (PMR).webp",
+      image: "/img/optimized/pmr-card.webp",
       title: t('rates.pmr'),
       description: t('rates.pmrDesc'),
       tag: t('rates.pmr'),

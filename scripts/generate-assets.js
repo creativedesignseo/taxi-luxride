@@ -1,5 +1,6 @@
 
 import sharp from 'sharp';
+import heicConvert from 'heic-convert';
 import { promises as fs } from 'fs';
 import { watch } from 'fs';
 import { join, parse, dirname } from 'path';
@@ -30,47 +31,53 @@ async function ensureDir(dir) {
 }
 
 async function processSingleFile(filename) {
-  if (!/\.(jpg|jpeg|png|webp|avif)$/i.test(filename)) return;
+  if (!/\.(jpg|jpeg|png|webp|avif|heic)$/i.test(filename)) return;
 
-  const { name } = parse(filename);
+  const { name, ext } = parse(filename);
   const inputPath = join(RAW_DIR, filename);
 
   try {
-    // Check if file exists (it might have been deleted)
     const inputStats = await fs.stat(inputPath);
-
-    // Check availability checking timestamps
     let needsProcessing = false;
     for (const profileName of Object.keys(PERFILES)) {
         const outputFilename = `${name}-${profileName}.webp`;
         const outputPath = join(OUTPUT_DIR, outputFilename);
         try {
             const outputStats = await fs.stat(outputPath);
-            // If original is newer than output, we need to process
             if (inputStats.mtimeMs > outputStats.mtimeMs) {
                 needsProcessing = true;
                 break;
             }
         } catch (e) {
-            // Output doesn't exist
             needsProcessing = true;
             break;
         }
     }
 
-    if (!needsProcessing) {
-       // Silent skip or verbose if needed
-       // console.log(`⏭️  Skipping ${filename} (already up to date)`);
-       return;
-    }
+    if (!needsProcessing) return;
 
-    console.log(`⚡ Procesando: ${filename} ...`);
+    console.log(`⚡ Procesando: ${filename}`);
+
+    let imageBuffer;
+    if (ext.toLowerCase() === '.heic') {
+      console.log(`   🔄 Convirtiendo HEIC a buffer...`);
+      const inputBuffer = await fs.readFile(inputPath);
+      imageBuffer = await heicConvert({
+        buffer: inputBuffer,
+        format: 'JPEG',
+        quality: 1
+      });
+    } else {
+      imageBuffer = inputPath;
+    }
 
     for (const [profileName, config] of Object.entries(PERFILES)) {
       const outputFilename = `${name}-${profileName}.webp`;
       const outputPath = join(OUTPUT_DIR, outputFilename);
 
-      await sharp(inputPath)
+      console.log(`   🔸 Generando ${profileName} (${config.width}x${config.height})...`);
+
+      await sharp(imageBuffer)
         .resize({
             width: config.width,
             height: config.height,
@@ -80,7 +87,7 @@ async function processSingleFile(filename) {
         .webp({ quality: config.quality })
         .toFile(outputPath);
     }
-    console.log(`   ✅ Completado!`);
+    console.log(`   ✅ ${filename} optimizado correctamente.`);
 
   } catch (error) {
     console.error(`❌ Error con ${filename}:`, error.message);

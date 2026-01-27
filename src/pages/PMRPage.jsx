@@ -62,7 +62,7 @@ const PMRPage = () => {
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 z-10 bg-black/40" />
                     <img 
-                        src="/img/Persona con movilidad reducida (PMR).webp" 
+                        src="/img/optimized/pmr-hero.webp" 
                         alt="PMR Taxi" 
                         className="absolute inset-0 w-full h-full object-cover"
                     />
