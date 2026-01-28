@@ -21,6 +21,7 @@ import BusinessPage from './pages/BusinessPage';
 import CruisePortPage from './pages/CruisePortPage';
 import TaxiXLPage from './pages/TaxiXLPage';
 import PMRPage from './pages/PMRPage';
+import BabySeatsPage from './pages/BabySeatsPage';
 import { PrivacyPolicy, LegalNotice, CookiesPolicy } from './pages/LegalPages';
 
 // Supported languages
@@ -96,6 +97,7 @@ const App = () => {
     { path: "taxi-xl", element: <TaxiXLPage /> },
     { path: "puerto-cruceros", element: <CruisePortPage /> },
     { path: "pmr", element: <PMRPage /> },
+    { path: "sillas-bebe", element: <BabySeatsPage /> },
     { path: "servicios", element: <ServicesPage /> },
     { path: "tour/:id", element: <TourDetailPage /> },
     { 

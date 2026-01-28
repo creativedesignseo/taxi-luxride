@@ -10,7 +10,8 @@
 ### Añadido
 - **Optimizador de Imágenes**: Nuevo script en `scripts/generate-assets.js` con soporte para formatos JPG, PNG, WebP, AVIF y ahora **HEIC**.
 - **Perfiles de Imagen**: Automatización de generación de versiones `hero`, `card`, `mobile` y `thumb`.
-- **Nuevos Assets**: Actualización de imágenes de PMR, Aeropuerto, Tours (Gaudí, Montserrat, Dalí, PortAventura) y Puerto de Cruceros (Smart Assets).
+- **Nuevos Services**: Implementación del servicio "Sillas para Bebé" con landing page dedicada (`/sillas-bebe`) y equipamiento homologado.
+- **Nuevos Assets**: Actualización de imágenes de PMR, Aeropuerto, Tours (Gaudí, Montserrat, Dalí, PortAventura), Puerto de Cruceros y Sillas para Bebé (Smart Assets).
 - **Mejora de Algoritmo de Imagen**: Implementación de centrado absoluto, ajuste de brillo/saturación y filtro de nitidez (sharpening) en el post-procesamiento.
 
 ### Diseño y UX

@@ -42,6 +42,13 @@ const ServicesSection = () => {
       description: t('rates.pmrDesc'),
       tag: t('rates.pmr'),
       link: '/pmr'
+    },
+    {
+      image: "/img/optimized/Sillas-para-Bebé-card.webp",
+      title: t('services.babySeats.title'),
+      description: t('services.babySeats.desc'),
+      tag: t('services.babySeats.tag'),
+      link: '/sillas-bebe'
     }
   ];
 

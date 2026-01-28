@@ -64,6 +64,11 @@
             "desc": "Executive transfers for Mobile World Congress (MWC) and international trade fairs.",
             "tag": "Business"
         },
+        "babySeats": {
+            "title": "Baby Seats Service",
+            "desc": "Approved Group 0+ seats and carriers for the little ones. Safety guaranteed.",
+            "tag": "Family"
+        },
         "bookService": "Book Service"
     },
     "rates": {

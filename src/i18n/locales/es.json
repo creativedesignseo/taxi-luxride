@@ -162,6 +162,11 @@
       "desc": "Traslados ejecutivos para Mobile World Congress (MWC) y ferias internacionales.",
       "tag": "Negocios"
     },
+    "babySeats": {
+      "title": "Sillas para Bebé",
+      "desc": "Maxicosi y sillas grupo 0+ homologadas para los más pequeños. Seguridad garantizada.",
+      "tag": "Familiar"
+    },
     "bookService": "Reservar Servicio"
   },
   "booking": {
