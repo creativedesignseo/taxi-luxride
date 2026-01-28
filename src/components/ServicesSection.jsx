@@ -9,7 +9,7 @@ const ServicesSection = () => {
   
   const services = [
     {
-      image: "/img/optimized/taxi-areopuerto-card.webp",
+      image: "/img/optimized/aeroport-de-barcelona-2-card.webp",
       title: t('services.airport.title'),
       description: t('services.airport.desc'),
       tag: t('services.airport.tag'),
