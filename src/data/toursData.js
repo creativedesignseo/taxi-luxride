@@ -52,8 +52,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "110 km",
     price: null,
-    image: "/img/optimized/portaventura-hero.webp",
-    cardImage: "/img/optimized/portaventura-card.webp",
+    image: "/img/optimized/portaventura-2-hero.webp",
+    cardImage: "/img/optimized/portaventura-2-card.webp",
     itinerary: [
       { time: '09:00', desc: { es: 'Salida de Barcelona', en: 'Departure from Barcelona', it: 'Partenza da Barcellona' } },
       { time: '10:15', desc: { es: 'Llegada a PortAventura', en: 'Arrival at PortAventura', it: 'Arrivo a PortAventura' } },
