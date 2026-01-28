@@ -82,8 +82,8 @@ export const toursData = {
     capacity: "Max 7-8 pax",
     distance: "140 km",
     price: null,
-    image: "/img/optimized/Tour-Museo-Dalí-(Figueres)-hero.webp",
-    cardImage: "/img/optimized/Tour-Museo-Dalí-(Figueres)-card.webp", // Placeholder
+    image: "/img/optimized/Tour-Museo-Dalí-2-hero.webp",
+    cardImage: "/img/optimized/Tour-Museo-Dalí-2-card.webp", // Placeholder
     itinerary: [
       { time: '08:30', desc: { es: 'Salida de Barcelona', en: 'Departure from Barcelona', it: 'Partenza da Barcellona' } },
       { time: '10:30', desc: { es: 'Visita Museo Dalí', en: 'Dalí Museum Visit', it: 'Visita Museo Dalí' } },
