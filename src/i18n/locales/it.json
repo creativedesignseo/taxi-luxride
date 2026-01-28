@@ -126,6 +126,7 @@
     "legalNotice": "Avviso Legale",
     "location": "Spagna",
     "legal": "Legale",
+    "links": "Navigazione",
     "email": "info@taxiluxride.com",
     "description": "Servizio ufficiale di taxi premium. Licenze ufficiali e tariffe competitive."
   },
@@ -161,6 +162,11 @@
       "title": "Fira de Barcelona / Eventi",
       "desc": "Trasferimenti esecutivi per Mobile World Congress (MWC) e fiere internazionali.",
       "tag": "Affari"
+    },
+    "babySeats": {
+      "title": "Seggiolini Bimbi",
+      "desc": "Ovetti e seggiolini gruppo 0+ omologati per i più piccoli. Sicurezza garantita.",
+      "tag": "Famiglia"
     },
     "bookService": "Prenota Servizio"
   },

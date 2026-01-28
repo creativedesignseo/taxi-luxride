@@ -3,20 +3,39 @@ import { useTranslation } from 'react-i18next';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 
 const Footer = ({ phoneDisplay = "+34 631 80 66 45" }) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const navigate = useNavigate();
   const location = useLocation();
-  
+  /* Improved scroll navigation with language support */
   const handleScrollNav = (sectionId) => {
-    if (location.pathname !== '/') {
-      navigate('/');
+    const currentLang = i18n.language ? i18n.language.split('-')[0] : 'es';
+    const SUPPORTED_LANGUAGES = ['es', 'en', 'de', 'fr', 'pt', 'zh', 'ja', 'ar', 'hi', 'ru', 'it'];
+    const isDefaultLang = currentLang === 'es' || !SUPPORTED_LANGUAGES.includes(currentLang);
+    const basePath = isDefaultLang ? '/' : `/${currentLang}`;
+    
+    // Normalize paths for comparison
+    const normalizedPath = location.pathname.replace(/\/$/, '') || '/';
+    const normalizedBasePath = basePath.replace(/\/$/, '') || '/';
+
+    if (normalizedPath !== normalizedBasePath) {
+      navigate(basePath);
+      // Wait for navigation and rendering
       setTimeout(() => {
         const element = document.getElementById(sectionId);
-        if (element) element.scrollIntoView({ behavior: 'smooth' });
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // Fallback for ID 'top' or 'inicio' if not found
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
       }, 500);
     } else {
       const element = document.getElementById(sectionId);
-      if (element) element.scrollIntoView({ behavior: 'smooth' });
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     }
   };
 
@@ -35,7 +54,7 @@ const Footer = ({ phoneDisplay = "+34 631 80 66 45" }) => {
   ];
 
   const companyLinks = [
-    { name: t('nav.home'), id: 'top' },
+    { name: t('nav.home'), id: 'inicio' },
     { name: t('nav.services'), id: 'servicios' },
     { name: t('nav.rates'), id: 'reservar' },
     { name: t('nav.contact'), id: 'contacto' },
@@ -96,7 +115,7 @@ const Footer = ({ phoneDisplay = "+34 631 80 66 45" }) => {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">{t('footer.legal')}</h4>
+            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">{t('footer.links')}</h4>
             <ul className="space-y-3">
               {companyLinks.map((link, i) => (
                 <li key={i}>
