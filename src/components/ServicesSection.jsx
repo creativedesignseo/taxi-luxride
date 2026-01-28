@@ -30,7 +30,7 @@ const ServicesSection = () => {
       link: '/servicio-business'
     },
     {
-      image: "/img/Puerto-2.webp",
+      image: "/img/optimized/Traslados-Puerto-de-Cruceros-card.webp",
       title: t('rates.port'),
       description: t('services.port.desc'),
       tag: t('services.port.tag'),

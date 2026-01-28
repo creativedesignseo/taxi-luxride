@@ -62,7 +62,7 @@ const CruisePortPage = () => {
                 <div className="absolute inset-0">
                     <div className="absolute inset-0 z-10 bg-black/40" />
                     <img 
-                        src="/img/Puerto-2.webp" 
+                        src="/img/optimized/Traslados-Puerto-de-Cruceros-hero.webp" 
                         alt="Cruise Port" 
                         className="absolute inset-0 w-full h-full object-cover"
                     />
