@@ -13,6 +13,11 @@
 - **Nuevos Services**: Implementación del servicio "Sillas para Bebé" con landing page dedicada (`/sillas-bebe`) y equipamiento homologado.
 - **Nuevos Assets**: Actualización de imágenes de PMR, Aeropuerto, Tours (Gaudí, Montserrat, Dalí, PortAventura), Puerto de Cruceros y Sillas para Bebé (Smart Assets).
 - **Mejora de Algoritmo de Imagen**: Implementación de centrado absoluto, ajuste de brillo/saturación y filtro de nitidez (sharpening) en el post-procesamiento.
+- **Reorganización del Footer**: 
+    - Unificación de enlaces bajo la sección "Explora".
+    - Eliminación de enlaces redundantes ("Inicio").
+    - Mejora de la lógica de scroll para navegación entre páginas e idiomas.
+    - Enlaces directos a páginas de detalle de Tours más populares.
 
 ### Diseño y UX
 - **Reordenación de Servicios**: El servicio de Taxi Aeropuerto ahora aparece en primera posición para mayor visibilidad.

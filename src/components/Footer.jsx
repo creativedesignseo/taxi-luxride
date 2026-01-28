@@ -40,10 +40,10 @@ const Footer = ({ phoneDisplay = "+34 631 80 66 45" }) => {
   };
 
   const tourLinks = [
-    { name: 'Barcelona City & Miradores', to: '/tours' },
-    { name: 'Sagrada Familia & Gaudí', to: '/tours' },
-    { name: 'Camp Nou & Museos', to: '/tours' },
-    { name: 'Barcelona Nocturna', to: '/tours' },
+    { name: 'Costa Brava', to: '/tour/costa-brava' },
+    { name: 'Monasterio de Montserrat', to: '/tour/montserrat' },
+    { name: 'Sitges & Tarragona', to: '/tour/costa-dorada' },
+    { name: 'Museo Dalí (Figueres)', to: '/tour/dali-museum' },
   ];
 
   const destinationLinks = [
@@ -54,10 +54,9 @@ const Footer = ({ phoneDisplay = "+34 631 80 66 45" }) => {
   ];
 
   const companyLinks = [
-    { name: t('nav.home'), id: 'inicio' },
     { name: t('nav.services'), id: 'servicios' },
-    { name: t('nav.rates'), id: 'reservar' },
-    { name: t('nav.contact'), id: 'contacto' },
+    { name: t('nav.tours'), id: 'tours' },
+    { name: t('nav.about'), id: 'nosotros' },
   ];
 
   return (
@@ -115,7 +114,7 @@ const Footer = ({ phoneDisplay = "+34 631 80 66 45" }) => {
 
           {/* Company Links */}
           <div>
-            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">{t('footer.links')}</h4>
+            <h4 className="text-white font-bold text-base font-['Arimo',sans-serif] mb-6">{t('footer.explore')}</h4>
             <ul className="space-y-3">
               {companyLinks.map((link, i) => (
                 <li key={i}>
