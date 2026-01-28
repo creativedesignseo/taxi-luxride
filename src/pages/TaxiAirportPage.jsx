@@ -213,7 +213,7 @@ const TaxiAirportPage = () => {
                         {lang === 'es' ? 'Destinos Frecuentes' : lang === 'it' ? 'Destinazioni Frequenti' : 'Frequent Destinations'}
                     </h3>
                     
-                    <div className="space-y-4">
+                    <div className="space-y-4 max-h-[260px] overflow-y-auto pr-2 custom-scrollbar">
                          <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
                             <span className="font-medium text-slate-700">Aeropuerto ↔ Barcelona Centro</span>
                             <ArrowRight size={16} className="text-gray-400" />
@@ -223,7 +223,11 @@ const TaxiAirportPage = () => {
                             <ArrowRight size={16} className="text-gray-400" />
                         </div>
                          <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
-                            <span className="font-medium text-slate-700">Aeropuerto ↔ Sitges / Costa Brava</span>
+                            <span className="font-medium text-slate-700">Aeropuerto ↔ Costa Brava</span>
+                            <ArrowRight size={16} className="text-gray-400" />
+                        </div>
+                         <div className="flex justify-between items-center p-4 bg-white rounded-xl shadow-sm border border-slate-100">
+                            <span className="font-medium text-slate-700">Aeropuerto ↔ Costa Dorada</span>
                             <ArrowRight size={16} className="text-gray-400" />
                         </div>
                     </div>

@@ -1,5 +1,12 @@
 # Changelog
 
+## [2026-01-28]
+### Modificado
+- **Traslados y Destinos**: Reordenación de los servicios para priorizar: Aeropuerto, Cruceros, Taxi XL, Sillas Bebé, Business y PMR.
+- **Página de Aeropuerto**: 
+    - Desglose de los destinos "Costa Brava" y "Costa Dorada" en entradas individuales.
+    - Implementación de un contenedor con scroll vertical y barra de desplazamiento personalizada para optimizar el espacio visual en la sección de destinos frecuentes.
+
 ## [2026-01-27]
 ### Corregido
 - **Rutas**: Solucionada la importación faltante de `TaxiXLPage` en `App.jsx` que causaba un error en la navegación.

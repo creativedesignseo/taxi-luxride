@@ -16,11 +16,25 @@ const ServicesSection = () => {
       link: '/taxi-aeropuerto-barcelona'
     },
     {
+      image: "/img/optimized/Traslados-Puerto-de-Cruceros-card.webp",
+      title: t('rates.port'),
+      description: t('services.port.desc'),
+      tag: t('services.port.tag'),
+      link: '/puerto-cruceros'
+    },
+    {
       image: "/img/coches con maletero grandes.webp",
       title: t('rates.bigLuggage'),
       description: t('rates.bigLuggageDesc'),
       tag: t('booking.form.passengersLabel'),
       link: '/taxi-xl'
+    },
+    {
+      image: "/img/optimized/Sillas-para-Bebé-card.webp",
+      title: t('services.babySeats.title'),
+      description: t('services.babySeats.desc'),
+      tag: t('services.babySeats.tag'),
+      link: '/sillas-bebe'
     },
     {
       image: "/img/Coche de lujo.png",
@@ -30,25 +44,11 @@ const ServicesSection = () => {
       link: '/servicio-business'
     },
     {
-      image: "/img/optimized/Traslados-Puerto-de-Cruceros-card.webp",
-      title: t('rates.port'),
-      description: t('services.port.desc'),
-      tag: t('services.port.tag'),
-      link: '/puerto-cruceros'
-    },
-    {
       image: "/img/optimized/pmr-card.webp",
       title: t('rates.pmr'),
       description: t('rates.pmrDesc'),
       tag: t('rates.pmr'),
       link: '/pmr'
-    },
-    {
-      image: "/img/optimized/Sillas-para-Bebé-card.webp",
-      title: t('services.babySeats.title'),
-      description: t('services.babySeats.desc'),
-      tag: t('services.babySeats.tag'),
-      link: '/sillas-bebe'
     }
   ];
 
