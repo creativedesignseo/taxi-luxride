@@ -101,18 +101,30 @@ async function processSingleFile(filename) {
 
       console.log(`   🔸 Generando ${profileName} (${config.width}x${config.height})...`);
 
+      // Aplicamos un "Safe Zoom" del 5% para ocultar marcas de agua en los bordes
+      const zoomFactor = 1.05; 
+      const zoomWidth = Math.round(config.width * zoomFactor);
+      const zoomHeight = Math.round(config.height * zoomFactor);
+
       await sharp(imageBuffer)
         .resize({
+            width: zoomWidth,
+            height: zoomHeight,
+            fit: 'cover',
+            position: 'center'
+        })
+        // Recortamos al tamaño original para aplicar el zoom y ocultar las esquinas
+        .extract({
+            left: Math.round((zoomWidth - config.width) / 2),
+            top: Math.round((zoomHeight - config.height) / 2),
             width: config.width,
-            height: config.height,
-            fit: config.fit,
-            position: config.position
+            height: config.height
         })
         .modulate({
             brightness: dynamicBrightness,
             saturation: dynamicSaturation
         })
-        .sharpen() // Añade nitidez
+        .sharpen()
         .webp({ quality: config.quality })
         .toFile(outputPath);
     }
