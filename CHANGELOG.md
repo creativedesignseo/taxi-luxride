@@ -1,6 +1,10 @@
 # Changelog
 
 ## [2026-01-29]
+### Añadido
+- **BIMI Support**: Generado `Favicon.svg` en `public/img/` (copia de logo vectorial) para cumplir con los requisitos de identificación de marca en correos electrónicos.
+
+## [2026-01-29]
 ### Modificado
 - **Traslados Aeropuerto y Puerto**: Actualizadas las imágenes de las tarjetas de servicio y los hero banners con nuevos activos optimizados (`aeroport-de-barcelona-4-*` y `Traslados-Puerto-de-Cruceros-2-*`).
 - **Página de Aeropuerto**: 

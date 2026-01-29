@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g id="Favicon" transform="matrix(0.541218,0,0,0.557369,-31.40262,-1196.509119)">
+        <rect x="58.022" y="2146.708" width="946.015" height="918.601" style="fill:none;"/>
+        <clipPath id="_clip1">
+            <rect x="58.022" y="2146.708" width="946.015" height="918.601"/>
+        </clipPath>
+        <g clip-path="url(#_clip1)">
+            <g id="Gemini_Generated_Image_tat1mxtat1mxtat1--1-.png" serif:id="Gemini_Generated_Image_tat1mxtat1mxtat1 (1).png" transform="matrix(1.798438,0.411464,-0.423743,1.746324,1096.016729,-2198.264474)">
+                <clipPath id="_clip2">
+                    <rect x="0" y="0" width="2048" height="2048"/>
+                </clipPath>
+                <g clip-path="url(#_clip2)">
+                    <g transform="matrix(0.973347,-0.229337,0.229337,0.973347,8.590529,2486.044482)">
+                    </g>
+                </g>
+            </g>
+            <g transform="matrix(2.345077,0,0,2.086896,-29.743608,-2306.265727)">
+                <rect x="37.426" y="2133.779" width="403.404" height="440.176" style="fill:rgb(28,31,35);"/>
+            </g>
+            <g transform="matrix(1.847685,0,0,1.794143,-49.143574,-1703.522261)">
+                <g transform="matrix(1,0,0,1,-676.541532,1424.775231)">
+                    <path d="M842.742,834.509L898.438,834.509L1039.808,992.321L931.797,1119.94L878.748,1119.94L981.925,992.321L842.742,834.509Z" style="fill:rgb(255,219,58);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,-578.008369,1424.775231)">
+                    <path d="M842.742,834.509L898.438,834.509L1039.808,992.321L931.797,1119.94L878.748,1119.94L981.925,992.321L842.742,834.509Z" style="fill:rgb(255,219,58);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
