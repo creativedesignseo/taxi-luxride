@@ -9,14 +9,14 @@ const ServicesSection = () => {
   
   const services = [
     {
-      image: "/img/optimized/aeroport-de-barcelona-2-card.webp",
+      image: "/img/optimized/aeroport-de-barcelona-4-card.webp",
       title: t('services.airport.title'),
       description: t('services.airport.desc'),
       tag: t('services.airport.tag'),
       link: '/taxi-aeropuerto-barcelona'
     },
     {
-      image: "/img/optimized/Traslados-Puerto-de-Cruceros-card.webp",
+      image: "/img/optimized/Traslados-Puerto-de-Cruceros-2-card.webp",
       title: t('rates.port'),
       description: t('services.port.desc'),
       tag: t('services.port.tag'),

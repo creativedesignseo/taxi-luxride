@@ -1,11 +1,15 @@
 # Changelog
 
-## [2026-01-28]
+## [2026-01-29]
 ### Modificado
-- **Traslados y Destinos**: Reordenación de los servicios para priorizar: Aeropuerto, Cruceros, Taxi XL, Sillas Bebé, Business y PMR.
+- **Traslados Aeropuerto y Puerto**: Actualizadas las imágenes de las tarjetas de servicio y los hero banners con nuevos activos optimizados (`aeroport-de-barcelona-4-*` y `Traslados-Puerto-de-Cruceros-2-*`).
 - **Página de Aeropuerto**: 
     - Desglose de los destinos "Costa Brava" y "Costa Dorada" en entradas individuales.
     - Implementación de un contenedor con scroll vertical y barra de desplazamiento personalizada para optimizar el espacio visual en la sección de destinos frecuentes.
+
+## [2026-01-28]
+### Modificado
+- **Traslados y Destinos**: Reordenación de los servicios para priorizar: Aeropuerto, Cruceros, Taxi XL, Sillas Bebé, Business y PMR.
 
 ## [2026-01-27]
 ### Corregido
