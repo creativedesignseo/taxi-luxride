@@ -55,6 +55,7 @@ const BookingCTA = ({ onBooking }) => {
                   </div>
                 </div>
                 <button 
+                  id="btn-whatsapp-cta"
                   type="button"
                   onClick={onBooking}
                   className="w-full bg-[#1C1F23] text-white py-4 rounded-xl font-bold hover:bg-[#34373C] transition-colors flex items-center justify-center gap-2 font-['Inter',sans-serif]"

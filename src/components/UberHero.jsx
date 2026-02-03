@@ -641,6 +641,7 @@ const UberHero = ({ onBooking }) => {
                 {/* CTA Button */}
                 <div className="mt-4">
                    <button 
+                     id="btn-whatsapp-hero"
                      onClick={handleBookingClick}
                      disabled={isRouting}
                      className="bg-black text-white px-6 py-3.5 rounded-lg font-bold text-base hover:bg-black/90 transition-all font-['Inter',sans-serif] w-fit flex items-center gap-2"
