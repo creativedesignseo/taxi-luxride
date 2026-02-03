@@ -43,11 +43,16 @@ const LanguageSync = ({ children }) => {
   return children;
 };
 
+import AnalyticsTracker from './components/AnalyticsTracker';
+
+// ... (existing imports)
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <ErrorBoundary>
       <HelmetProvider>
         <BrowserRouter>
+          <AnalyticsTracker />
           <LanguageSync>
             <App />
           </LanguageSync>
