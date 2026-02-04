@@ -16,7 +16,7 @@ const ServicesSection = () => {
       link: '/taxi-aeropuerto-barcelona'
     },
     {
-      image: "/img/optimized/Traslados-Puerto-de-Cruceros-2-card.webp",
+      image: "/img/optimized/taxi-puerto-crucero-barcelona.webp",
       title: t('rates.port'),
       description: t('services.port.desc'),
       tag: t('services.port.tag'),

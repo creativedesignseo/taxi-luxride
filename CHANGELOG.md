@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026-02-04]
+### Modificado
+- **Puerto de Cruceros**: Actualizada la imagen principal y de la tarjeta de servicio con una nueva versión optimizada para SEO (`taxi-puerto-crucero-barcelona.webp`).
+- **Limpieza**: Eliminados assets antiguos no utilizados.
+
 ## [2026-01-29]
 ### Añadido
 - **BIMI Support**: Generado `Favicon.svg` en `public/img/` (copia de logo vectorial) para cumplir con los requisitos de identificación de marca en correos electrónicos.
