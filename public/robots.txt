@@ -12,8 +12,8 @@ Disallow: /admin/
 
 # BLOQUEAR páginas técnicas (no aportan SEO)
 Disallow: /cookies
-Disallow: /privacy
-Disallow: /legal
+Disallow: /privacidad
+Disallow: /aviso-legal
 
 # BLOQUEAR archivos de configuración
 Disallow: /*.json$

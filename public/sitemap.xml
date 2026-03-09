@@ -1,304 +1,198 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- ===== HOME ===== -->
   <url>
     <loc>https://taxiluxride.com/</loc>
-    <lastmod>2026-02-03</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://taxiluxride.com/de"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taxiluxride.com/fr"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://taxiluxride.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://taxiluxride.com/it"/>
+    <xhtml:link rel="alternate" hreflang="zh" href="https://taxiluxride.com/zh"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://taxiluxride.com/ja"/>
+    <xhtml:link rel="alternate" hreflang="ar" href="https://taxiluxride.com/ar"/>
+    <xhtml:link rel="alternate" hreflang="hi" href="https://taxiluxride.com/hi"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://taxiluxride.com/ru"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/"/>
   </url>
+
+  <!-- ===== RESERVAR ===== -->
   <url>
     <loc>https://taxiluxride.com/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- ===== TAXI AEROPUERTO BARCELONA (prioridad máxima de servicios) ===== -->
   <url>
-    <loc>https://taxiluxride.com/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://taxiluxride.com/taxi-aeropuerto-barcelona</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/taxi-aeropuerto-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/taxi-aeropuerto-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://taxiluxride.com/de/taxi-aeropuerto-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taxiluxride.com/fr/taxi-aeropuerto-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://taxiluxride.com/it/taxi-aeropuerto-barcelona"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/taxi-aeropuerto-barcelona"/>
   </url>
+
+  <!-- ===== PUERTO CRUCEROS ===== -->
   <url>
-    <loc>https://taxiluxride.com/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://taxiluxride.com/puerto-cruceros</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/puerto-cruceros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/puerto-cruceros"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://taxiluxride.com/de/puerto-cruceros"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taxiluxride.com/fr/puerto-cruceros"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://taxiluxride.com/it/puerto-cruceros"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/puerto-cruceros"/>
   </url>
+
+  <!-- ===== TAXI XL ===== -->
   <url>
-    <loc>https://taxiluxride.com/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://taxiluxride.com/taxi-xl</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/taxi-xl"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/taxi-xl"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://taxiluxride.com/de/taxi-xl"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taxiluxride.com/fr/taxi-xl"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://taxiluxride.com/it/taxi-xl"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/taxi-xl"/>
   </url>
+
+  <!-- ===== SERVICIO BUSINESS ===== -->
+  <url>
+    <loc>https://taxiluxride.com/servicio-business</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/servicio-business"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/servicio-business"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://taxiluxride.com/de/servicio-business"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taxiluxride.com/fr/servicio-business"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://taxiluxride.com/it/servicio-business"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/servicio-business"/>
+  </url>
+
+  <!-- ===== PMR (MOVILIDAD REDUCIDA) ===== -->
+  <url>
+    <loc>https://taxiluxride.com/pmr</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/pmr"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/pmr"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/pmr"/>
+  </url>
+
+  <!-- ===== SILLAS BEBÉ ===== -->
+  <url>
+    <loc>https://taxiluxride.com/sillas-bebe</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/sillas-bebe"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/sillas-bebe"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/sillas-bebe"/>
+  </url>
+
+  <!-- ===== SERVICIOS ===== -->
+  <url>
+    <loc>https://taxiluxride.com/servicios</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/servicios"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/servicios"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/servicios"/>
+  </url>
+
+  <!-- ===== TOURS ===== -->
+  <url>
+    <loc>https://taxiluxride.com/tours</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.75</priority>
+    <xhtml:link rel="alternate" hreflang="es" href="https://taxiluxride.com/tours"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://taxiluxride.com/en/tours"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://taxiluxride.com/de/tours"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://taxiluxride.com/fr/tours"/>
+    <xhtml:link rel="alternate" hreflang="it" href="https://taxiluxride.com/it/tours"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://taxiluxride.com/tours"/>
+  </url>
+
+  <!-- ===== HOMES POR IDIOMA ===== -->
   <url>
     <loc>https://taxiluxride.com/en</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/en/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/en/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/en/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/en/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/de</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/de/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/de/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/de/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/de/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/fr</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/fr/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/fr/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/fr/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/fr/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/pt</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/pt/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
+    <lastmod>2026-03-09</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://taxiluxride.com/pt/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/pt/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/pt/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://taxiluxride.com/it</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/zh</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/zh/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/zh/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/zh/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/zh/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/ja</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ja/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ja/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ja/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ja/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/ar</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ar/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ar/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ar/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ar/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/hi</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/hi/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/hi/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/hi/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/hi/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://taxiluxride.com/ru</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://taxiluxride.com/ru/reservar</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ru/aviso-legal</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ru/privacidad</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://taxiluxride.com/ru/cookies</loc>
-    <lastmod>2026-02-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
+
 </urlset>

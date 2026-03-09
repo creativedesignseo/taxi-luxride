@@ -27,6 +27,37 @@ const TaxiAirportPage = () => {
         window.open(`https://wa.me/${PHONE_NUMBER}?text=${text}`, '_blank');
     };
 
+    const airportSchema = {
+        '@context': 'https://schema.org',
+        '@type': 'Service',
+        name: 'Taxi Aeropuerto Barcelona — T1 y T2',
+        description: 'Servicio de taxi al Aeropuerto de Barcelona Josep Tarradellas El Prat (BCN). Recogida en Terminal 1 y Terminal 2 con cartel Meet & Greet. Servicio 24h, precio fijo o taxímetro.',
+        url: 'https://taxiluxride.com/taxi-aeropuerto-barcelona',
+        provider: {
+            '@type': 'LocalBusiness',
+            name: 'Taxi Lux Ride',
+            telephone: '+34631806645',
+            url: 'https://taxiluxride.com',
+        },
+        areaServed: {
+            '@type': 'Airport',
+            name: 'Aeropuerto Josep Tarradellas Barcelona-El Prat',
+            iataCode: 'BCN',
+        },
+        offers: {
+            '@type': 'Offer',
+            availability: 'https://schema.org/InStock',
+            priceCurrency: 'EUR',
+            description: 'Precio fijo o taxímetro. Traslado con minivan disponible para grupos.',
+        },
+        availableChannel: {
+            '@type': 'ServiceChannel',
+            serviceUrl: 'https://taxiluxride.com/reservar',
+            servicePhone: '+34631806645',
+            availableLanguage: ['Spanish', 'English', 'Italian'],
+        },
+    };
+
     // SEO Data
     const seoData = {
         title: {
@@ -80,8 +111,16 @@ const TaxiAirportPage = () => {
             <Helmet>
                 <title>{seoData.title[lang] || seoData.title.es}</title>
                 <meta name="description" content={seoData.description[lang] || seoData.description.es} />
-                <meta name="keywords" content="taxi aeropuerto barcelona, taxi barcelona airport, transfer barcelona airport, taxi bcn airport, precio taxi aeropuerto barcelona" />
+                <meta name="keywords" content="taxi aeropuerto barcelona, taxi barcelona airport, transfer barcelona airport, taxi bcn airport, precio taxi aeropuerto barcelona, tarifa taxi aeropuerto barcelona, reservar taxi aeropuerto barcelona" />
                 <link rel="canonical" href="https://taxiluxride.com/taxi-aeropuerto-barcelona" />
+                <meta property="og:title" content={seoData.title[lang] || seoData.title.es} />
+                <meta property="og:description" content={seoData.description[lang] || seoData.description.es} />
+                <meta property="og:image" content="https://taxiluxride.com/img/optimized/aeroport-de-barcelona-4-hero.webp" />
+                <meta property="og:url" content="https://taxiluxride.com/taxi-aeropuerto-barcelona" />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:image" content="https://taxiluxride.com/img/optimized/aeroport-de-barcelona-4-hero.webp" />
+                <script type="application/ld+json">{JSON.stringify(airportSchema)}</script>
             </Helmet>
 
             {/* ===== HERO SECTION ===== */}
