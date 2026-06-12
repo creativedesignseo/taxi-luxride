@@ -16,7 +16,7 @@ const TaxiAirportPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const PHONE_NUMBER = "+34631806645";
+    const PHONE_NUMBER = "+34600707174";
 
     const handleCall = () => {
         window.location.href = `tel:${PHONE_NUMBER}`;
@@ -36,7 +36,7 @@ const TaxiAirportPage = () => {
         provider: {
             '@type': 'LocalBusiness',
             name: 'Taxi Lux Ride',
-            telephone: '+34631806645',
+            telephone: '+34600707174',
             url: 'https://taxiluxride.com',
         },
         areaServed: {
@@ -53,7 +53,7 @@ const TaxiAirportPage = () => {
         availableChannel: {
             '@type': 'ServiceChannel',
             serviceUrl: 'https://taxiluxride.com/reservar',
-            servicePhone: '+34631806645',
+            servicePhone: '+34600707174',
             availableLanguage: ['Spanish', 'English', 'Italian'],
         },
     };

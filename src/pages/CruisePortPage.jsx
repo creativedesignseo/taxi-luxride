@@ -15,7 +15,7 @@ const CruisePortPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const PHONE_NUMBER = "+34631806645";
+    const PHONE_NUMBER = "+34600707174";
 
     const handleWhatsApp = () => {
         const text = encodeURIComponent("Hola, quiero reservar un traslado al/del Puerto de Cruceros.");

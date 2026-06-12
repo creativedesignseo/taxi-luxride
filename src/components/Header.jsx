@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next';
 import { Phone, Menu } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher';
 
-const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 631 80 66 45" }) => {
+const Header = ({ onNavClick, onCall, onMenuClick, phoneDisplay = "+34 600 70 71 74" }) => {
   const { t } = useTranslation();
   return (
     <header className="fixed top-0 left-0 w-full z-50 bg-[#1C1F23] md:bg-white border-b border-white/10 md:border-black/5">

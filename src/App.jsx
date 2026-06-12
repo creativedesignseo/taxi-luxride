@@ -34,8 +34,8 @@ const App = () => {
   const location = useLocation();
 
   // Phone configuration
-  const PHONE_NUMBER = "+34631806645";
-  const PHONE_DISPLAY = "+34 631 80 66 45";
+  const PHONE_NUMBER = "+34600707174";
+  const PHONE_DISPLAY = "+34 600 70 71 74";
 
   // Scroll to top on route change
   useEffect(() => {

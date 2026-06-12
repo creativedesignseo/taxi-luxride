@@ -16,7 +16,7 @@ const BabySeatsPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const PHONE_NUMBER = "+34631806645";
+    const PHONE_NUMBER = "+34600707174";
 
     const handleCall = () => {
         window.location.href = `tel:${PHONE_NUMBER}`;

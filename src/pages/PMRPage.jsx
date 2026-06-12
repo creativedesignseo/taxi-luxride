@@ -15,7 +15,7 @@ const PMRPage = () => {
         window.scrollTo(0, 0);
     }, []);
 
-    const PHONE_NUMBER = "+34631806645";
+    const PHONE_NUMBER = "+34600707174";
 
     const handleWhatsApp = () => {
         const text = encodeURIComponent("Hola, necesito reservar un Taxi Adaptado (Eurotaxi/PMR).");
